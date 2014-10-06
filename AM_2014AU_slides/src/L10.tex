@@ -1,0 +1,208 @@
+\begin{frame}
+	\frametitle{第十讲、连续函数}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S3.4 ）}
+	  \begin{itemize}
+	    \item 理解连续函数的概念
+	    \item 掌握间断点的类型与性质
+	    \item 熟练掌握连续函数在闭区间上的性质
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b P148-149：4,5(1-3),9,14,15,17}
+	    \item 思考题：{\b P148-149：1,3,13,16,19}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{函数连续的概念}
+
+\begin{frame}{函数的连续性}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义3.4.1}\hfill P138}
+		{\bb 函数$f(x)$在$x_0$连续：}$\limx{x_0}f(x)=f(x_0)$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item $f(x)$在$x_0$有定义\pause 
+	  \item $\limx{x_0}f(x)$存在\pause 
+	  \item $f(x_0)=f(x_0+0)=f(x_0-0)$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例1}\hfill P140-例3}
+		设$f(x)$在$(-\infty,+\infty)$上有定义，且对任意$x,y\in (-\infty,+\infty)$，有
+		$$f(x+y)=f(x)+f(y),$$
+		则$f(x)$在$(-\infty,+\infty)$上连续，当且仅当$f(x)$在$x=0$连续。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{间断点}
+	\linespread{1.5}\pause 
+% 	{\bf 问题：}函数在其不连续点处可能有哪些不同性态？
+	\begin{block}{{\bf 定义3.4.4}\hfill P141}
+		设$x_0$是$f(x)$的间断点，对其分类如下： \pause
+		\begin{enumerate}
+		  \item \uncover<4->{{\bb 第一类间断点：}$f(x_0+0),f(x_0-0)$均存在}
+		  \begin{itemize}
+		    \item \uncover<6->{{\b 跳跃间断点：}$f(x_0+0)\ne f(x_0-0)$}
+		    \item \uncover<7->{{\b 可去间断点：}$f(x_0)$无定义，或\\
+		    \centerline{$f(x_0)\ne f(x_0+0)=f(x_0-0)$}}
+		  \end{itemize}
+		  \item \uncover<5->{{\bb 第二类间断点：}$f(x_0+0),f(x_0-0)$不同时存在}
+		  \begin{itemize}
+		    \item \uncover<8->{{\b 无穷间断点：}某个单侧极限趋于无穷}
+		    \item \uncover<9->{{\b 振荡间断点：}某个单侧极限不存在}
+		  \end{itemize}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\section{连续函数的基本性质}
+
+% \begin{frame}{连续函数的基本性质}
+% 	\linespread{2}
+% 	\begin{enumerate}
+% 	  \item {\bf 四则运算}
+% 	  \item {\bf 复合函数的连续性}
+% 	  \item {\bf 反函数的连续性}
+% 	  \item {\bf 初等函数的连续性}
+% 	\end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}{连续函数的四则运算}
+% 	\linespread{1.6}
+% 	\begin{block}{{\bf 定理3.4.1}\hfill P143}
+% 		设$f(x),g(x)$在$x_0$连续，则
+% 		\begin{enumerate}
+% 		  \item $\lambda f(x)+\mu g(x)$在$x_0$连续（$\lambda,\mu$为任意常数）
+% 		  \item $f(x)g(x)$在$x_0$连续
+% 		  \item 若$g(x_0)\ne 0$，$\df {f(x)}{g(x)}$在$x_0$连续
+% 		\end{enumerate}
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{复合函数的连续性}
+% 	\linespread{1.5}
+% 	\begin{block}{{\bf 定理3.4.2}\hfill P144}
+% 		$\varphi(x)$在$x_0$连续，$f(u)$在$u_0$连续，且$g(x_0)=u_0$，则$f[g(x)]$在$x_0$连续。
+% 	\end{block}
+% 	{\bf 注：}函数运算可以和极限运算交换次序
+% 	\begin{exampleblock}{{\bf 例2}\hfill P145-例9}
+% 		计算极限：$\limx{+\infty}\left(\cos\df 1x\right)^{x^2}$
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{反函数的连续性}
+% 	\linespread{1.5}
+% 	\begin{block}{{\bf 定理3.4.3}\hfill P145}
+% 		可逆连续函数的反函数也连续。
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{初等函数的连续性}
+% 	\linespread{1.5}
+% 	\begin{block}{{\bf 定理3.4.4}\hfill P145}
+% 		初等函数均在其定义域内连续。
+% 	\end{block}
+% \end{frame}
+
+\begin{frame}{连续函数的基本性质}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理3.4.1-3.4.4}\hfill P143-145}\pause 
+		\begin{enumerate}
+		  \item {\bf 四则运算：}\pause 四则运算仍保持函数的连续性\pause 
+		  \item {\bf 复合函数：}\pause 连续函数的函数运算可以和极限运算交换次序\pause 
+		  \item {\bf 反函数：}\pause 连续函数的反函数也连续\pause 
+		  \item {\bf 初等函数：}\pause 初等函数在其定义域内连续
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\section{连续函数在闭区间上的性质}
+
+\begin{frame}{连续函数在闭区间上的性质}
+	\linespread{2}\pause 
+	\begin{enumerate}
+	  \item {\bf 最值定理}\pause 
+	  \begin{itemize}
+	    \item 有界性\pause 
+	  \end{itemize}
+	  \item {\bf 介值定理}\pause 
+	  \begin{itemize}
+	    \item 零点存在性
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{最值定理}
+	\linespread{1.2}\pause 
+% 	{\bm{ $f(x)\in C[a,b]$}}：$f(x)$在区间$[a,b]$上连续
+	\begin{block}{{\bf 定理3.4.5}\hfill P145}
+		设$f(x)\in C[a,b]$，则$f(x)$在$[a,b]$上可取到最大和最小值。
+	\end{block}\pause 
+	\begin{block}{{\bf 推论}\hfill}
+		设$f(x)\in C[a,b]$，则$f(x)$在$[a,b]$上有界。
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		设$f(x)\in C[a,+\infty)$，且$\limx{+\infty}f(x)$存在，则$f(x)$在$[a,+\infty)$上有界。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{介值定理}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理3.4.6}\hfill P147}
+		设$f(x)\in C[a,b]$，$M,m$分别为$f(x)$在$[a,b]$上的最大和最小值，则对任意$\gamma\in[m,M]$，
+		存在$\xi\in[a,b]$，使得$f(\xi)=\gamma$。
+	\end{block}\pause 
+% 	{\bf 注：}闭区间上的连续函数可以取到其最大最小值间的任意值
+	\begin{block}{{\bf 推论}（零值定理/零点存在性）\hfill P147}
+		设$f(x)\in C[a,b]$，且$f(a)f(b)<0$，则$f(x)$在$[a,b]$上必有零点。
+	\end{block}
+\end{frame}
+
+\begin{frame}{零点存在性定理的推广}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 推论}\hfill}
+		\begin{enumerate}
+		  \item 设$f(x)\in C(a,b)$，且$f(a+0)f(b-0)<0$，则$f(x)$在$(a,b)$内有零点。\pause 
+		  \item 设$f(x)\in C(-\infty,+\infty)$，且$f(-\infty)f(+\infty)<0$，
+		  则$f(x)$在$(-\infty,+\infty)$内有零点。
+		\end{enumerate}
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例3}\hfill P149-18}
+		设$a_0\ne 0$，证明：以下方程至少有一个实根
+		$$a_0x^{2n+1}+a_1x^{2n}+\ldots+a_{2n}x+a_{2n+1}=0.$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 函数连续的概念：}$\limx{x_0}f(x)=f(x_0)$
+	  \item {\bf 连续函数的基本性质：}
+	  \begin{itemize}
+	    \item 四则运算、复合、求逆、初等函数
+	  \end{itemize}
+	  \item {\bf 连续函数在闭区间上的性质}
+	  \begin{itemize}
+	    \item 最值定理
+	    \item 有界性
+	    \item 介值定理
+	    \item 零点存在性
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%=================================
+
+\begin{frame}{课后思考题}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：}\hfill}
+		设$a_1<a_2<\ldots<a_n$，证明以下方程有$n-1$个实根
+		$$\df 1{x-a_1}+\df 1{x-a_2}+\ldots+\df 1{x-a_n}=0.$$
+	\end{exampleblock}
+\end{frame}

@@ -1,0 +1,323 @@
+\begin{frame}
+	\frametitle{第九讲、无穷小与无穷大}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S3.3 ）}
+	  \begin{itemize}
+	    \item 理解无穷小与无穷大的概念
+	    \item 熟练掌握用无穷小代换计算极限的方法
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b P136-137：2,4,5,8,9}
+	    \item 思考题：{\b P136-137：1,6,12,13}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{无穷小与无穷大的概念}
+
+\begin{frame}{无穷小}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定义3.3.1}\hfill P136}
+		{\bb $f(x)$是$x\to\Delta$时的无穷小：}$\limx{\Delta}f(x)=0$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item {\b $\Delta$：}$\infty,\;+\infty,\;-\infty,\;x_0,\;x_0^+,\;x_0^-$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{无穷小的性质}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理3.3.1-3.3.2}\hfill P126-127}
+		\begin{enumerate}
+		  \item $\limx{\Delta}f(x)=A\in\mathbb{R}\Leftrightarrow
+		  f(x)-A$是$x\to\Delta$时的无穷小\pause 
+		  \item 同一过程的有界函数中与无穷小之积仍为该过程中的无穷小\pause 
+		  \item {\alert{在同一过程中的有限个无穷小之和（积）仍为该过程中的无穷小}}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{无穷大}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义3.3.2}\hfill P128}
+		{\bb $f(x)$是$x\to\Delta$时的无穷大：}$\limx{\Delta}\df 1{f(x)}=0$，即：
+		$$\limx{\pm\infty}f(x)=\pm\infty$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item \alert{无穷大有正负之分！}\pause 
+	\end{itemize}
+	\begin{exampleblock}{{\bf 例1}\hfill P129-例4}
+		证明：$x+\sin x$是$x\to\infty$时的无穷大
+	\end{exampleblock}
+% 	{\bf 思考：}无穷大与无界是什么关系？
+\end{frame}
+
+\begin{frame}{无穷大的性质}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理3.3.3}\hfill P129}
+		在$x\to\Delta$的同一过程中：\pause 
+		\begin{enumerate}
+		  \item \alert{有界函数与无穷大之和仍为无穷大}\pause 
+		  \item \alert{有限个无穷大之乘积仍为无穷大\pause （可能反号）}\pause 
+		\end{enumerate}
+	\end{block}
+	\begin{exampleblock}{{\bf 例2}\hfill }
+		证明：$f(x)=a_0x^n+a_1x^{n-1}+\ldots+a_n(n\in\mathbb{N})$是$x\to\infty$时的无穷大，其中：
+		$a_0,a_1,\ldots,a_n\in\mathbb{R},a_0\ne 0$
+	\end{exampleblock}
+\end{frame}
+
+\section{无穷小的比较}
+
+\begin{frame}{无穷小的比较}
+	\linespread{1.2}\pause 
+% 	{\bf 问题：}同为无穷小，哪个趋于零更快？
+	\begin{block}{{\bf 定义3.3.3}\hfill P131}
+		设$y_1,y_2$均为$x\to\Delta$时的无穷小，$\limx{\Delta}\df{y_1}{y_2}=A$为常数\pause 
+		\begin{enumerate}
+		  \item $A=0$，称$y_1$为$y_2$当$x\to\Delta$时的{\bb 高阶（高级）无穷小}，\pause 记为：{\b
+		  $y_1=\circ( y_2)\;(x\to\Delta)$}\pause 
+		  \begin{itemize}
+		    \item 无穷小：\alert{$y_1=\circ(1)\;(x\to\Delta)$}\pause 
+		  \end{itemize}
+		  \item $A\ne 0$，称$y_1$为$y_2$当$x\to\Delta$时的{\bb 同阶（同级）无穷小}，\pause 记为：{\b
+		  $y_1=\mathrm{O}( y_2)\;(x\to\Delta)$}\pause 
+		  \item $A=1$，称$y_1$为$y_2$当$x\to\Delta$时的\alert{\bf 等价无穷小}，\pause 记为：\alert{
+		  $y_1\sim y_2\;(x\to\Delta)$}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{高阶无穷小的运算}
+	\linespread{1.2}\pause 
+% 	{\bf 问题：}同为无穷小，哪个趋于零更快？
+	\begin{alertblock}{{\bf 性质：}\hfill }
+		当$x\to 0$时\pause 
+		\begin{enumerate}
+		  \item $x^n=\circ(x^m)\;(m<n)$\pause 
+		  \item $\circ(x^n)=x^n\circ(1)$\pause 
+		  \item $x^n\circ(x^m)=\circ(x^{m+n})$\pause 
+		  \item $\circ(x^n)+\circ(x^m)=\circ(x^n)\;(m\geq n)$\pause 
+		  \item $C\circ(x^n)=\circ(x^n)\;(C\in\mathbb{R}\mbox{为常数})$\pause 
+		  \item $\circ(x^n)\circ(x^m)=\circ(x^{m+n})$
+		\end{enumerate}
+	\end{alertblock}
+\end{frame}
+
+\section{无穷小代换}
+
+\begin{frame}{（等价）无穷小代换}
+	\linespread{1.2}\pause 
+% 	{\bf 问题：}同为无穷小，哪个趋于零更快？
+	\begin{block}{{\bf 等价无穷小的性质}\hfill}
+		\begin{enumerate}\pause 
+		  \item {\b 自反性：}\pause $y\sim y$\pause 
+		  \item {\b 对称性：}\pause $y_1\sim y_2\Rightarrow y_2\sim y_1$\pause 
+		  \item {\b 传递性：}\pause $y_1\sim y_2,y_2\sim y_3\Rightarrow y_1\sim y_3$\pause 
+		\end{enumerate}
+	\end{block}
+	\begin{block}{{\bf 定义3.3.4}\hfill P132}
+		设$y_1\sim
+		y_2\;(x\to\Delta)$，则$\limx{\Delta}y_1y_3=A\Leftrightarrow\limx{\Delta}y_2y_3=A$
+% 		\begin{enumerate}
+% 		  \item 
+% 		  \item $$
+% 		\end{enumerate}
+	\end{block}\pause 
+	{\bf 注：}\alert{ 极限“乘法因子”中的等价无穷小可相互替代}
+\end{frame}
+
+% \begin{frame}[empty]
+% 	\linespread{1.2}
+% % 	{\bf 问题：}同为无穷小，哪个趋于零更快？
+% 	\begin{alertblock}{常用的无穷小代换：当$x\to 0$时}
+% 		\begin{enumerate}
+% 		  \item $x\sim \sin x\sim \tan x$
+% 		  \item $x \sim\arcsin x\sim\arctan x$
+% 		  \item $1-\cos x\sim \df 12 x^2$
+% 		  \item $(1+x)^a-1\sim ax$
+% 		  \item $\ln(1+x)\sim x$
+% 		  \item $a^x-1\sim x\;(a>0)$
+% 		\end{enumerate}
+% 	\end{alertblock}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.2}\pause 
+% 	{\bf 问题：}同为无穷小，哪个趋于零更快？
+	\begin{columns}[t]
+		\column{.5\textwidth}
+		\begin{alertblock}{常用无穷小代换：\pause $x\to 0$时}\pause 
+		\begin{enumerate}
+		  \item $x\sim \sin x\sim \tan x$\pause 
+		  \item $x \sim\arcsin x\sim\arctan x$\pause 
+		  \item $1-\cos x\sim \df 12 x^2$\pause 
+		  \item $(1+x)^a-1\sim ax$\pause 
+		  \item $\ln(1+x)\sim x$\pause 
+		  \item $a^x-1\sim x\ln a\;(a>0)$\pause 
+		\end{enumerate}
+	\end{alertblock}
+		\column{.48\textwidth}
+% 		{\bf {\b 例3：}计算极限}\pause 
+ 		\begin{exampleblock}{例3：计算极限}
+			\begin{enumerate}
+			  \item $\limx{0}\df{\arctan x}{\sin 4x}$\pause 
+			  \item $\limx{0}\df{\ln\cos ax}{\ln\cos bx}$\pause 
+			  \item $\limx{0}\df{\cos x(e^{\sin x}-1)^4}{\sin^2 x(1-\cos x)}$\pause 
+			  \item $\limx{0}\df{\sin x-\tan x+x^3}{\sin^3 x}$\pause 
+			\end{enumerate}
+ 		\end{exampleblock}
+	\end{columns}
+	\bigskip
+	\centerline{\ba{极限中的“加法因子”不能进行无穷小代换！}}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 无穷小与无穷大：}
+	  \begin{itemize}
+	    \item 定义
+	    \item 性质
+	  \end{itemize}
+	  \item {\bf 无穷小的比较：}
+	  \begin{itemize}
+	    \item 高阶、同阶与等价无穷小
+	  \end{itemize}
+	  \item {\bf 等价无穷小代换}
+	  \begin{itemize}
+	    \item 常用代换
+	    \item 代换规则：\alert{“乘除可以，加减不行”}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+% 
+% \begin{frame}
+% 	\frametitle{习题课四：函数极限}
+% 	\linespread{2}
+% 	{\bf 内容回顾}
+% 	\begin{enumerate}
+% 	    \item 函数极限的概念与性质
+% 	    \item 两个重要的极限
+% 	    \item 无穷小代换
+% 	\end{enumerate}
+% \end{frame}
+
+% \section{问题讨论}
+
+\begin{frame}{问题讨论}
+	\linespread{1.5}\pause 
+	\begin{enumerate}
+	  \item {\bf 用$\e-\delta$语言叙述如下命题：}\pause 
+	  \begin{itemize}
+	    \item 当$x\to x_0$时$f(x)$不以$A$为极限\\ \pause {\b
+	    $\exists\e_0>0,\forall\delta>0, \exists x^*\in
+	    U_0(x_0,\delta),|f(x^*)-A|\geq\e_0$}\pause 
+	    \item 当$x\to x_0$时$f(x)$无极限\pause \\ {\b $\forall
+	    A\in\mathbb{R},\exists\e_0>0,\forall\delta>0, \exists x^*\in
+	    U_0(x_0,\delta),|f(x^*)-A|\geq\e_0$}\pause 
+	  \end{itemize}
+	  {\bf 证明：}Dirichlet函数在任意点处无极限。
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \addtocounter{enumi}{1}\pause 
+	  \item {\bf 若$x\to x_0$时，$f(x)$有极限，$g(x)$无极限，则当$x\to x_0$时，以下哪些函数必无极限：}\pause
+	  \\
+	  \centerline{$f(x)g(x),\pause \quad [g(x)]^2,\pause \quad
+	  \df{g(x)}{f(x)},\pause \quad f(x)+g(x)$}\pause 
+	  \item {\bf 若$\limx{x_0}g(x)=A,\lim\limits_{u\to
+	  A}f(u)=B$，是否必有$$\limx{x_0}f[g(x)]=B\;?$$\pause }
+	  \vspace{-2em}
+	  \item {\bf 若$\limx{x_0}f(x)g(x)=0$，则当$x\to
+	  x_0$时， $f(x),$ $g(x)$之一必趋于$0$}\;\pause (\alert{$\times$})
+	\end{enumerate}
+\end{frame}
+
+% \section{函数极限证明举例}
+
+\begin{frame}{函数极限证明举例}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例1}\hfill}
+		设$\limx{x_0}f(x)=A$，用定义证明：$\limx{x_0}[f(x)]^3=A^3$
+	\end{exampleblock}\pause 
+	\bigskip
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		设在$(0,+\infty)$上，恒有$f(x^2)=f(x)$，且
+		$$\limx{0^+}f(x)=\limx{+\infty}f(x)=f(1)$$
+		证明：$f(x)=f(1)\,(x\in(0,+\infty))$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		设$f(x)=\sum\limits_{i=1}^na_i\sin
+		ix$，其中$a_i(i=1,2,\ldots,n)$为常数，且对任意$x\in\mathbb{R}$， $|f(x)|\leq |\sin x|$，证明：
+		$$\left|a_1+2a_2+\ldots+na_n\right|\leq 1$$
+	\end{exampleblock}\pause 
+	\begin{exampleblock}{{\bf 例4}\hfill}
+		证明：$$\limn\left\{\lim\limits_{m\to\infty}\left[\cos^{2m}(n!\pi
+		x)\right]\right\}=D(x)$$
+		其中$D(x)$为Dirichlet函数
+	\end{exampleblock}
+\end{frame}
+
+% \section{极限计算举例}
+
+\begin{frame}{极限计算举例}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例5：}计算极限\hfill}\pause 
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+		\begin{enumerate}
+		  \item $\limx{+\infty}(\sqrt{x^2+x-1}-\sqrt{x^2+x-1})$\pause 
+		  \item $\limx{0}\df{\sqrt[3]{1+x}-1}{x}$\pause 
+		  \item $\limx{0}\df{\sqrt{1-\cos x^2}}{1-\cos x}$\pause 
+		  \item $\limx{0}\df{1-\cos x\cos 2x}{1-\cos x}$
+		\end{enumerate}
+% 			\column{.5\textwidth}
+% 		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例5：}计算极限\hfill}\pause 
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+		\begin{enumerate}
+		  \addtocounter{enumi}{4}
+		  \item $\limx{\pi /4}(\tan x)^{\tan 2x}$\pause 
+		  \item $\limx{0}\left(2e^{\frac{x}{x+1}}-1\right)^{\frac{x^2+1}{x}}$\pause 
+		  \item $\limx{+\infty}\left(\sqrt{x^2+x}-\sqrt[3]{x^3+x^2}\right)$\pause 
+		  \item $\limx{+\infty}\left(\df{x^2-1}{x^2+1}\right)^{x^2}$
+		\end{enumerate}
+% 			\column{.5\textwidth}
+% 		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{2.5}
+	\begin{exampleblock}{{\bf 例5：}计算极限\hfill}\pause 
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+		\begin{enumerate}
+		  \addtocounter{enumi}{8}
+		  \item $\limx{0}\left(\df{a^x+b^x+c^x}{3}\right)^{1/x}\,(a,b,c>0)$\pause 
+		  \item $\limx{0}\left(\df{a^{x+1}+b^{x+1}+c^{x+1}}{a+b+c}\right)^{1/x}
+		  \,(a,b,c>0)$\pause 
+		  \item $\limx{0}\df{\tan(\tan x)-\sin(\sin x)}{\tan x-\sin x}$
+		\end{enumerate}
+% 			\column{.5\textwidth}
+% 		\end{columns}
+	\end{exampleblock}
+\end{frame}

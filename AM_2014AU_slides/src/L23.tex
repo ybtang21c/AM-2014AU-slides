@@ -1,0 +1,296 @@
+\begin{frame}{第二十三讲、不定积分的计算}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b（ \S 6.3 ）}
+	  \begin{itemize}
+	    \item 熟练掌握不定积分的第一、二类换元法
+	    \item 熟练掌握分部积分法
+	    \item 掌握有理函数的积分法
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题6.3：4,5,6}
+%  	    \item 思考题：{\b 习题5.3：1,5,8,9,12,14}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{原函数与不定积分}
+
+\begin{frame}{原函数与不定积分}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义}\hfill}
+		\begin{enumerate}\pause 
+		  \item $F(x)$是$f(x)$的{\bb 原函数}：\pause $F'(x)=f(x)$\pause 
+		  \item $f(x)$的{\bb 不定积分}：\pause $\dint f(x)\d x=F(x)+C$\pause 
+		\end{enumerate}
+	\end{block}
+	\begin{itemize}
+	  \item $\dint f(x)\d x=\dint \d F(x)$\pause 
+	  \item $\left[\dint f(x)\d x\right]'=f(x)$\pause 
+	  \item $\dint [af(x)+bg(x)]\d x=a\dint f(x)\d x+b\dint g(x)\d x$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{基本不定积分公式}
+	\linespread{1.2}
+	\begin{columns}\pause 
+		\column{.5\textwidth}
+			\begin{enumerate}
+			  \item $\dint k\d x$\pause 
+			  \item $\dint e^x\d x$\pause 
+			  \item $\dint x^a\d x\;(a\ne -1)$\pause 
+			  \item $\dint a^x\d x\;(a>0)$\pause 
+			  \item $\dint \df {\d x}{x}$\pause 
+			  \item $\dint \cos x\d x$\pause 
+			\end{enumerate}
+		\column{.5\textwidth}
+			\begin{enumerate}
+			  \addtocounter{enumi}{6} 
+			  \item $\dint \sin x\d x$\pause 
+			  \item $\dint \df{\d x}{\cos^2x}$\pause 
+			  \item $\dint \df{\d x}{\sin^2 x}$\pause 
+			  \item $\dint \sec x\tan x \d x$\pause 
+			  \item $\dint \df{\d x}{1+x^2}$\pause 
+			  \item $\dint \df{\d x}{\sqrt{1-x^2}}$
+			\end{enumerate}
+	\end{columns}
+\end{frame}
+
+\section{换元积分法}
+
+\begin{frame}{换元积分法}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理6.3.1}(第一换元法)\hfill P333}
+		设$f(u)$具有原函数，$u=\varphi(x)$可导，则
+		$$\dint f[\varphi(x)]\varphi'(x)\d x=\left[\dint f(u)
+		\d u\right]_{u=\varphi(x)}$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item 设$F(x)$是$f(x)$的一个原函数，则
+	  $$\dint f[\varphi(x)]\varphi'(x)\d x=F[\varphi(x)]+C$$
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1}
+	\begin{exampleblock}{{\bf 例1：}计算下列不定积分\hfill}
+		\begin{columns}\pause 
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\dint 2\cos 2x\d x$\pause 
+				  \item $\dint\df 1{3+2x}\d x$\pause 
+				  \item $\dint 2xe^{x^2}\d x$\pause 
+				  \item $\dint\df{x^2}{(x+2)^3}\d x$\pause 
+				  \item $\dint\df 1{a^2+x^2}\d x$\pause 
+				  \item $\dint\df 1{\sqrt{a^2-x^2}}\d x$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{6}
+				  \item $\dint \df 1{x(1+2\ln x)}\d x$\pause 
+				  \item $\dint\df {e^{3\sqrt x}}{\sqrt x}\d x$\pause 
+				  \item $\dint \sin^3x\d x$\pause 
+				  \item $\dint \sin^2x\cos^4x\d x$\pause 
+				  \item $\dint\sec^6x\d x$\pause 
+				  \item $\dint\sec x\d x$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1}
+	\begin{block}{{\bf 定理6.3.2}(第二换元法)\hfill P338}
+		设$x=\varphi(t)$可导且可逆，$f[\varphi(t)]\varphi'(t)$具有原函数，则
+		$$\dint f(x)\d x=\left[\dint
+		f[\varphi(t)]\varphi'(t)\d t\right]_{t=\varphi^{-1}(x)}$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例2：}计算下列不定积分\hfill}
+		\begin{columns}
+			\column{.5\textwidth}
+				\begin{enumerate}\pause 
+				  \item $\dint \sqrt{a^2-x^2}\d x$\pause 
+				  \item $\dint\df{\d x}{\sqrt{x^2+a^2}}$\pause 
+				  \item $\dint\df{\d x}{\sqrt{x^2-a^2}}$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\dint \df{1}{1+\sqrt x}\d x$\pause 
+				  \item $\dint\df{\d x}{1+\sqrt[3]{x+2}}$\pause 
+				  \item $\dint\df{\sqrt{a^2-x^2}}{x^4}\d x$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\section{分部积分法}
+
+\begin{frame}{分部积分法}
+	\linespread{1.2}\pause 
+	$$\dint uv'\d x=uv-\dint u'v\d x$$\pause 
+	\begin{exampleblock}{{\bf 例3：}计算下列不定积分\hfill}
+		\begin{columns}
+			\column{.5\textwidth}
+				\begin{enumerate}\pause 
+				  \item $\dint x\cos x\d x$\pause 
+				  \item $\dint xe^x\d x$\pause 
+				  \item $\dint x^2e^x\d x$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\dint x\ln x\d x$\pause 
+				  \item $\dint x\arctan x\d x$\pause 
+				  \item $\dint e^x\sin x\d x$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\section{有理函数积分}
+
+\begin{frame}{有理函数（有理分式）}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义}\hfill}
+		$$f(x)=\df{P(x)}{Q(x)}$$
+		其中$P(x),Q(x)$均为多项式函数\pause ，若$P(x)$的次数小于$Q(x)$的次数，
+		称该函数为{\bb 真分式}\pause ，否则为{\bb 假分式}\pause 
+	\end{block}
+	\begin{itemize}
+	  \item 利用{\bb 多项式除法}，任意假分式都可以表示成一个多项式与一个真分式的和，\pause 例如：
+	\end{itemize}
+	$$\df{2x^4+x^2+3}{x^2+1}=2x^2-1+\df{4}{x^2+1}$$
+\end{frame}
+
+\begin{frame}{基本的有理函数积分}
+	\linespread{1.5}\pause 
+	\begin{exampleblock}{{\bf 例4：}计算下列不定积分\hfill}
+		\begin{enumerate}\pause 
+		  \item $\dint (a_0+a_1x+a_2x^2+\ldots+a_nx^n)\d x$\pause 
+		  \item $\dint\df{\d x}{(x-a)^n}$\pause 
+		  \item $\dint\df{\d x}{x^2+px+q}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{itemize}
+	  \item
+	  设$Q(x)$可分解为两个没有共因式的多项式$Q_1(x),Q_2(x)$的乘积，则真分式$\df{P(x)}{Q(x)}$必可分解为
+	  两个真分式$\df{P_1(x)}{Q_1(x)},\df{P_2(x)}{Q_2(x)}$的和\pause 
+% 	  $$\df{P(x)}{Q(x)}=\df{P_1(x)}{Q_1(x)}+\df{P_2(x)}{Q_2(x)}$$
+	  \item 任意多项式都可分解为形如$(x^2+px+q)^l$，\\
+	  $(x-a)^k$的多项式的乘积\pause 
+	\end{itemize}
+	\begin{exampleblock}{{\bf 例5：}计算下列不定积分\hfill}\pause 
+		\begin{columns}[t]
+			\column{.4\textwidth}
+				\begin{enumerate}
+				  \item $\dint\df{x+1}{x^2+5x+6}\d x$\pause 
+				\end{enumerate}
+			\column{.6\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{1}
+				  \item $\dint\df{x+2}{(2x+1)(x^2+x+1)}\d x$\pause 
+				  \item $\dint\df{x-3}{(x-1)(x^2-1)}\d x$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{可化为有理函数的积分}
+	\linespread{2}\pause 
+	\begin{exampleblock}{{\bf 例6：}计算下列不定积分\hfill}\pause 
+		\begin{columns}[t]
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\dint\df{1+\sin x}{\sin x(1+\cos x)}\d x$\pause 
+				  \item $\dint\df{\sqrt{x-1}}{x}\d x$\pause 
+				  \item $\dint\df{\d x}{1+\sqrt[3]{x+2}}$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{3}
+				  \item $\dint\df{\d x}{(1+\sqrt[3]{x})\sqrt x}$\pause 
+				  \item $\dint\df 1x\sqrt{\df{1+x}{x}}\d x$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 换元法}
+	  \begin{itemize}
+	    \item $\dint f[\varphi(x)]\varphi'(x)\d x=\left[\dint f(d)
+	    \d u\right]_{u=\varphi(x)}$
+	    \item $\dint f(x)\d x=\left[\dint	
+	    f[\varphi(t)]\varphi'(t)\d t\right]_{t=\varphi^{-1}(t)}$
+	  \end{itemize}
+	  \item {\bf 分部积分法}
+	  \begin{itemize}
+	    \item $\dint uv'\d x=uv-\dint u'v\d x$
+	  \end{itemize}
+	  \item {\bf 有理函数积分}
+	\end{enumerate}
+% 	\bigskip
+% 	\pause
+% 	\centerline{\ba{请自行阅读第六章\S 6.3节}}
+\end{frame}
+
+\begin{frame}{小结}
+	\linespread{1.2}\pause 
+ 	{\bf 第一换元法常用技巧}\pause 
+	\begin{enumerate}
+	  \item {\bb 分项积分：}积化和差，有理分式分解，\ldots\pause 
+	  \item {\bb 降低幂次：}倍角公式，万能凑幂公式，\ldots\pause 
+	    $$\dint f(x^n)x^{n-1}\d x=\df 1n\dint f(x^n)\d x^n$$\pause 
+	    $$\dint f(x^n)\df 1x\d x=\df 1n\dint f(x^n)\df{1}{x^n}\d x^n$$\pause 
+	  \item {\bb 统一函数：}三角公式，$1=\sin^2x+\cos^2x$，\ldots\pause 
+	  \item {\bb 巧妙配元：}加一项减一项，\ldots
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{小结}
+	\linespread{1.2}\pause 
+ 	{\bf 第二换元法常用变换}\pause 
+	\begin{enumerate}
+	  \item {\bb 三角代换：}\pause 
+	  $$\sqrt{\pm(a^2\pm x^2)},x=a\tan t,a\sec t, a\cos t,\ldots$$\pause 
+	  \item {\bb 倒代换：}$x=\df 1t$\pause 
+	  \item {\bb 根式代换：}$x=\sqrt{x^2-1}$\pause 
+	  \item {\bb 半角代换：}$t=\tan\df x2$\pause 
+% 	   $$t=\tan\df x2,\sin x=\df{2t}{1+t^2},\cos x=\df{1-t^2}{1+t^2}$$
+	  \item {\bb Eular代换：}$x=\df 12\left(t+\df 1t\right)$
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{小结}
+	\linespread{1.2}\pause 
+ 	{\bf 分部积分法处理原则}\pause 
+ 	\begin{center}
+ 		{\bb “\alert{反对}不要碰，\alert{三指}动一动”}\pause 
+ 	\end{center}
+ 	将被积函数视为两个函数之积，按照{\ba{“三指幂对反”}}的次序将其中某一部分函数放到微分符号后面\pause 
+ 	\begin{enumerate}
+ 	  \item $\sin x,\cos x$\pause 
+ 	  \item $e^x$\pause 
+ 	  \item $x^n$
+ 	\end{enumerate}
+\end{frame}
+
+%===============================================
+
+\begin{frame}{课堂练习}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例7：}计算下列不定积分\hfill}
+		\begin{enumerate}
+		  \item $\dint\df{x^2+\sin^2x}{x^2+1}\sec^2x\d x$
+		  \item $\dint\df 1{(x^2+1)\sqrt{1-x^2}}\d x$
+		  \item $\dint\df{3\cos x-4\sin x}{\cos x+2\sin x}\d x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}

@@ -1,0 +1,170 @@
+\begin{frame}
+	\frametitle{第十一讲、导数}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S4.1 ）}
+	  \begin{itemize}
+	    \item 理解导数的定义
+	    \item 熟练掌握基本初等函数的导函数
+	    \item 理解导数存在的条件
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题4.1：6,7,8,9,10}
+	    \item 思考题：{\b 习题4.1：12,13,14,15,16}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{导数的概念}
+
+\begin{frame}{函数在一点处的导数}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义4.1.1} \hfill P156}
+		函数$y=f(x)$在$x_0$的某领域内有定义，\pause 若
+		$$\limdx\df{f(x_0+\dx)-f(x_0)}{\dx}$$
+		存在，\pause 则称其为{\bb $f(x)$在$x_0$处的导数}，\pause 记为
+		$$f\,'(x_0),\quad \left.\df{\d y}{\d x}\right|_{x=x_0},\quad y'_x|_{x=x_0}$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例1} \hfill 习题4.1-2}
+		假设$f\,'(x_0)$存在，则
+		\begin{enumerate}\pause 
+		  \item $\limdx\df{f(x_0-\Delta x)-f(x_0)}{\Delta
+		  x}=$\pause \underline{\quad\alert{$-f\,'(x_0)$}\quad}\pause 
+		  \item $\lim\limits_{h\to 0}\df{f(x_0+2h)-f(x_0)}{h}=$
+		  \pause \underline{\quad\alert{$2f\,'(x_0)$}\quad}\pause 
+		  \item $\lim\limits_{h\to 0}\df{f(x_0+h)-f(x_0-h)}{h}=$\pause 
+		  \underline{\quad\alert{$2f\,'(x_0)$}\quad}
+		\end{enumerate}
+	\end{exampleblock}\pause 
+	{\ba{ 思考：}}若以上某个极限存在，是否就意味着$f(x)$在$x_0$可导？
+\end{frame}
+
+\begin{frame}{导数的物理/几何意义}
+	\linespread{1.5}\pause 
+	\begin{itemize}
+	  \item {\bf 变速直线运动的瞬时速度}\pause
+	  $$v(t_0)=\lim\limits_{t\to t_0}\df{S(t)-S(t_0)}{t-t_0}$$
+	\end{itemize}
+	\pause
+% 	\begin{exampleblock}{{\bf 例1} \hfill }
+% 		一辆汽车做直线运动，其位移$S(t)=1-t^4$，求其在$t=2$是的速度。
+% 	\end{exampleblock}\pause
+	\begin{itemize}
+	  \item {\bf 曲线在一点处切线的斜率：}\pause
+	  $$k(x_0)=\lim\limits_{x\to x_0}\df{f(x)-f(x_0)}{x-x_0}$$
+	\end{itemize} 
+% 	{\ba{以直代曲：}在可导点的附近，函数曲线与其切线近似相等}
+	\pause
+	\begin{itemize}
+	  \item \alert{\bf 导数：函数关于自变量的相对变化率}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{导数的几何意义}
+	\linespread{1.5}\pause 
+	\begin{exampleblock}{{\bf 例2} \hfill P156-例1}
+		函数$f(x)=\sqrt[3]x$在点$x=0$是否可导？
+	\end{exampleblock}\pause 
+	{\ba{思考：}}可导等价于有切线吗？\pause （\alert{否}）\pause 
+	\bigskip
+	\begin{exampleblock}{{\bf 例3} \hfill }
+		已知函数$f(x)$在点$x_0$处可导，求曲线$y=f(x)$在该点的切线和法线方程。
+	\end{exampleblock}
+% 	{\ba{以直代曲：}在可导点的附近，函数曲线与其切线近似相等}
+\end{frame}
+
+\section{导函数}
+
+% \begin{frame}{导函数}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 定义4.1.1} \hfill}
+% 		123
+% 	\end{block}
+% \end{frame}
+
+
+\begin{frame}{导函数}
+	\linespread{1.2}\pause 
+	\begin{alertblock}{{\bf 例4}（一些常用函数的导函数） \hfill }\pause 
+% 		求以下函数的导数：
+		\begin{enumerate}
+		  \item $f(x)=C\;(C\mbox{为常数})$\pause \hfill $f\,'(x)=0$\pause 
+		  \item $f(x)=x^n\;(n\in\mathbb{Z})$\pause \hfill $f\,'(x)=nx^{n-1}\,(n\ne
+		  0)$\pause 
+		  \item $f(x)=e^x$\pause \hfill $f\,'(x)=e^x$\pause 
+		  \item $f(x)=\ln x$\pause \hfill $f\,'(x)=\df 1x$\pause 
+		  \item $f(x)=\sin x$\pause \hfill $f\,'(x)=\cos x$\pause 
+		  \item $f(x)=\cos x$\pause \hfill $f\,'(x)=-\sin x$
+		\end{enumerate}
+	\end{alertblock}
+\end{frame}
+
+\section{导数存在的条件}
+
+\begin{frame}{导数存在的条件}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理4.1.1} \hfill P161}
+		$f(x)$在$x_0$可导，当且仅当在该点的左、右导数存在且相等。
+	\end{block}\pause 
+	{\ba{思考：}}$f(x)=|{\sqrt[3]x}|$在原点是否可导？\pause
+% 	{\ba{注：}}左、右侧切线重合不等于可导！
+	\begin{block}{{\bf 定理4.1.2} \hfill P161}
+		$f(x)$在一点可导，则一定在该点连续。
+	\end{block}\pause 
+	{\ba{以直代曲：}}可导点附近，函数曲线与其切线近似相等
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例5} \hfill P164-例8}
+		确定常数$a,b$的值，使得函数
+		$$f(x)=\left\{
+		\begin{array}{ll}
+		ax+b,& x>0\\
+		e^x,& x\leq 0
+		\end{array}
+		\right.$$
+		在$x=0$可导。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例6} \hfill P160-例5}
+		证明：双曲线$y=\df 1x$的两个分支没有公共的切线。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 导数的概念：}
+	  \begin{itemize}
+	    \item $f\,'(x_0)=\limdx\df{f(x_0+\dx)-f(x_0)}{\d x}$
+	  \end{itemize}
+	  \item {\bf 常用初等函数的导函数}
+	  \begin{itemize}
+	    \item $C,\;x^n,\;e^x,\;\ln x,\;\sin x,\;\cos x$
+	  \end{itemize}
+	  \item {\bf 函数可导的条件}
+	  \begin{itemize}
+	    \item 可导必连续
+	    \item 以直代曲：$\Delta y=y'\Delta x+\circ(\Delta x),\,(\Delta x\to 0)$
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%======================
+
+% \begin{frame}{123}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 定义4.1.1} \hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

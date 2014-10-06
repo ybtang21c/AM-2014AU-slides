@@ -1,0 +1,411 @@
+\begin{frame}
+	\frametitle{第五讲、无穷级数}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S2.3）}
+	  \begin{itemize}
+ 	    \item 理解无穷级数的概念
+ 	    \item 熟练掌握级数的基本性质
+% 	    \item 熟练掌握级数收敛的判定方法
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题2.3：4(3),6}
+	    \item 思考题：{\b 习题2.3：7,8}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{级数的概念}
+
+\begin{frame}{无穷级数的概念}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 级数\pause （无穷和）：}\pause 无穷多个数按照一定次序求和\hfill}
+	$$\sum\limits_{k=1}^{\infty}a_k\pause
+	=\lim_{n\to\infty}\left(\sum_{k=1}^na_k\right)$$ \pause 
+	其中$a_k\in\mathbb{R}\,(k\in\mathbb{N})$。
+	\end{block}\pause 
+	\begin{itemize}
+	  \item {\b 部分和：}$S_n=\sum\limits_{k=1}^na_k$\pause 
+	  \item {\b 级数收敛：}$\Leftrightarrow\{S_n\}$收敛
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例1：}判断下列级数的收敛性\hfill}\pause 
+		\begin{enumerate}
+		  \item $\sumn q^n\quad (q>0)$\pause \hfill{\b \ldots\ldots 几何级数}\pause 
+		  \item $\sumn\df{1}{n(n+1)}$\pause 
+		  \item $\sumn\df 1n$\pause \hfill{\b \ldots\ldots 调和级数}\pause 
+% 		  \item $\sumn\df 1n^2$
+		  \item $\sumn (-1)^n$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{收敛级数的性质}
+
+\begin{frame}{收敛级数的性质}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理}\hfill}\pause 
+		\begin{enumerate}
+		  \item $\sumn
+		  a_n$收敛$\Leftrightarrow\sum\limits_{n=k}^{\infty}a_n$收敛$(k\in\mathbb{N})$\pause
+		  \item $\{a_n\}$收敛$\Leftrightarrow\sumn(a_{n+1}-a_n)$收敛\hfill {\b
+		  P73-例2}\pause 
+		  \item $\sumn a_n$收敛$\Rightarrow\limn a_n=0$\hfill {\b P74-定理2.3.1}\pause 
+		  \item 线性运算不改变级数的敛散性\hfill {\b P75-定理2.3.2-3}
+% 		  \item 收敛级数的和与差也收敛\hfill {\b P75-定理2.3.2}\pause 
+% 		  \item $\sumn a_n$与$\sumn Ca_n$同敛散（$C\ne 0$）\hfill {\b P75-定理2.3.3}\pause 
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{block}{{\bf 定理}（续）\hfill}
+		\begin{enumerate}
+		  \addtocounter{enumi}{4}\pause 
+		  \item 增加、减少或改变级数中的有限项不影响其敛散性 \hfill {\b P75-定理2.3.4}\pause 
+		  \begin{itemize}
+		    \item {\alert{增减或改变数列中的有限项不改变其敛散性}}\pause 
+		  \end{itemize}
+		  \item 若$\sumn a_n$收敛，不改变求和顺序，任意合并其中的项，所得新的级数仍收敛\hfill {\b
+		  P75-定理2.3.5}\pause 
+		  \begin{itemize}
+		    \item 推论：合并收敛级数中的相邻项，所得级数仍收敛\pause 
+		    \item {\alert{对发散级数，该性质不成立}}\pause 
+		    \item {\alert{改变求和次序，可能改变级数的收敛和}}
+		  \end{itemize}
+		\end{enumerate}
+	\end{block}
+% 	\begin{exampleblock}{{\bf 例2}\hfill P76-例7}
+% 	若$\sumn
+% 	a_n$收敛，则$\sumn(a_{3n-2}+a_{3n-1}+a_{3n})$收敛
+% 	\end{exampleblock}
+\end{frame}
+
+% \section{同号级数收敛性的判定}
+% 
+% \begin{frame}{同号级数收敛性的判定}
+% 	\linespread{1.6}
+% 	\begin{enumerate}\pause
+% 	  \item {\bf 收敛的充要条件}\pause
+% 	  \item {\bf 比较判别法}\pause
+% 	  \item {\bf 比值判别法}\pause
+% 	  \item {\bf 根值判别法}
+% 	\end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}{同号级数收敛的充要条件}
+% 	\linespread{1.2}\pause
+% 	\begin{block}{{\bf 定理2.4.1}\hfill P79}
+% 		正项级数$\sumn a_n$收敛，当且仅当其部分和数列有界
+% 	\end{block}\pause
+% % 	\vspace{1em}
+% 	\begin{exampleblock}{{\bf 例2}\hfill P80-例1}
+% 		证明$\sumn\df 1{n!}$收敛。
+% 	\end{exampleblock}\pause
+% 	\begin{alertblock}{{\bf $p$级数的敛散性}\hfill P81-例2}
+% 		$\sumn\df 1{n^p}$当$p>1$时收敛；$0<p\leq 1$时发散。
+% 	\end{alertblock}
+% \end{frame}
+% 
+% \begin{frame}{比较判别法}
+% 	\linespread{1.2}\pause
+% 	\begin{block}{{\bf 定理2.4.2}\hfill P81}
+% 		设$0\leq a_n\leq b_n\;(n\in\mathbb{N})$，则：\pause
+% 		\begin{enumerate}
+% 		  \item $\sumn b_n$收敛$\Rightarrow\sumn a_n$收敛\pause
+% 		  \item $\sumn a_n$发散$\Rightarrow\sumn b_n$发散\pause
+% 		\end{enumerate}
+% 	\end{block}
+% 	\begin{exampleblock}{{\bf 例3}\hfill P82-例3}
+% 		$0<p<1$时，$\sumn\df 1{n^p}$发散
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.5}
+% 	\begin{alertblock}{{\bf 例4}\hfill P82-例4}
+% 		设$a_n\leq c_n\leq b_n\;(n\in\mathbb{N})$，$\sumn a_n,\sumn b_n$均收敛，则$\sumn
+% 		c_n$收敛。
+% 	\end{alertblock}\pause
+% 	\begin{itemize}
+% 	  \item 级数收敛的“夹逼定理”\pause
+% 	  \item {\ba{比较判别法仅对正项级数有效}}
+% 	\end{itemize}
+% \end{frame}
+% % 
+% % % ================
+% % 
+% % \begin{frame}{比较判别法的极限形式}
+% % 	\linespread{1.5}
+% % 	\begin{block}{{\bf 定理2.4.3}\hfill P83}
+% % 		已知$a_n,b_n$均非负$(n\in\mathbb{N})$，且$\limn\df{a_n}{b_n}=l$，则
+% % 		\begin{enumerate}
+% % 		  \item 若$0<l<\infty$，$\sumn a_n,\sumn b_n$同敛散
+% % 		  \item 若$l=0$，$\sumn b_n$收敛$\Rightarrow\sumn a_n$收敛
+% % 		  \item 若$l=\infty$，$\sumn a_n$发散$\Rightarrow\sumn b_n$发散
+% % 		\end{enumerate}
+% % 	\end{block}
+% % \end{frame}
+% % 
+% % % \begin{frame}
+% % % 	\linespread{1.2}
+% % % 	\begin{block}{{\bf 例5：}判断以下级数的收敛性\hfill P83-例5,6}
+% % % 		\begin{enumerate}
+% % % 		  \item $\sumn\df 1{2^n}\df{n^2+1}{2n^2-1}$
+% % % 		  \item $\sumn\df{n+1}{n^k+2}\quad (k\in\mathbb{N})$
+% % % 		\end{enumerate}
+% % % 	\end{block}
+% % % \end{frame}
+% % 
+% % \begin{frame}{比值判别法}
+% % 	\linespread{1.5}
+% % 	\begin{block}{{\bf 定理2.4.4}（d'Alembert判别法）\hfill P84}
+% % 		设$a_n\geq 0(n\in\mathbb{N})$，$\limn\df{a_{n+1}}{a_n}=q\in [0,+\infty)$，则
+% % 		\begin{enumerate}
+% % 		  \item $0\leq q<1\Rightarrow\sumn a_n$收敛
+% % 		  \item $q>1\Rightarrow\sumn a_n$发散
+% % 		\end{enumerate}
+% % 	\end{block}
+% % 		{\bf 注：}$q=1$时无法直接判定，例如：$\sumn\df 1n$和$\sumn\df 1{n^2}$
+% % \end{frame}
+% % 
+% % \begin{frame}
+% % 	\linespread{1.5}
+% % 	\begin{exampleblock}{{\bf 例5：}判断下列级数的收敛性\hfill P83-85-例5-7}
+% % 		\begin{enumerate}
+% % 		  \item $\sumn\df 1{2^n}\df{n^2+1}{2n^2-1}$
+% % 		  \item $\sumn\df{n^2}{2^n}$
+% % 		  \item $\sumn\df{(2n)!}{(n!)^2}$
+% % 		  \item $\sumn\df{n+1}{n^k+2}\quad (k\in\mathbb{N})$
+% % 		\end{enumerate}
+% % 	\end{exampleblock}
+% % \end{frame}
+% % 
+% % \begin{frame}{根值判别法}
+% % 	\linespread{1.2}
+% % 	\begin{block}{{\bf 定理2.4.5}（Cauchy判别法）\hfill P85}
+% % 		设$a_n\geq 0(n\in\mathbb{N})$，$\limn\sqrt[n]{a_n}=q\in [0,+\infty)$，则
+% % 		\begin{enumerate}
+% % 		  \item $0\leq q<1\Rightarrow\sumn a_n$收敛
+% % 		  \item $q>1\Rightarrow\sumn a_n$发散
+% % 		\end{enumerate}
+% % 	\end{block}
+% % 	\begin{exampleblock}{{\bf 例6}\hfill P86-例8}
+% % 		证明$\sumn\df{2+(-1)^n}{5^n}$收敛。
+% % 	\end{exampleblock}
+% % \end{frame}
+% 
+% % \section{同号级数收敛性的判定}
+% % 
+% % \begin{frame}{同号级数收敛性的判定}
+% % 	\linespread{1.6}
+% % 	\begin{enumerate}\pause 
+% % 	  \item {\bf 收敛的充要条件}\pause 
+% % 	  \item {\bf 比较判别法}\pause 
+% % 	  \item {\bf 比值判别法}\pause 
+% % 	  \item {\bf 根值判别法}
+% % 	\end{enumerate}
+% % \end{frame}
+% 
+% \begin{frame}{比较判别法的极限形式}
+% 	\linespread{1.5}
+% 	\begin{block}{{\bf 定理2.4.3}\hfill P83}
+% 		已知$a_n,b_n$均非负$(n\in\mathbb{N})$，且$\limn\df{a_n}{b_n}=l$，则
+% 		\begin{enumerate}
+% 		  \item 若$0<l<+\infty$，$\sumn a_n,\sumn b_n$同敛散
+% 		  \item 若$l=0$，$\sumn b_n$收敛$\Rightarrow\sumn a_n$收敛
+% 		  \item 若$l=+\infty$，$\sumn a_n$发散$\Rightarrow\sumn b_n$发散
+% 		\end{enumerate}
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.6}
+% 	\begin{exampleblock}{{\bf 例5：}判断以下级数的收敛性\hfill P83-例5,6}\pause 
+% 		\begin{enumerate}
+% 		  \item $\sumn\df 1{2^n}\df{n^2+1}{2n^2-1}$\pause 
+% 		  \item $\sumn\df{n+1}{n^k+2}\quad (k=1,2,\ldots)$\pause 
+% 		  \item $\sumn\df{1}{n\sqrt[n]{n}}$\pause 
+% 		  \item $\sumn\df{1}{1+x^n}\quad(x>0)$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf 推论：}（p-判别法）\hfill}\pause 
+% 		设$a_n\geq 0\;(n=1,2,\ldots)$，则
+% 		\begin{enumerate}
+% 		  \item 若存在$p>1$，使得$\limn n^pa_n$存在，则$\sumn a_n$收敛
+% 		  \item 若$0<p\leq 1$，使得$\limn n^pa_n>0$，则$\sumn a_n$发散
+% 		\end{enumerate}
+% 	\end{block}\pause 
+% 	\begin{exampleblock}{{\bf 例6：}判断以下级数的收敛性}
+% 		\begin{enumerate}
+% 		  \item $\sumn\df{\arctan n}{n^{3/2}}$\pause 
+% 		  \item $\sumn\df{\ln n}{n^{5/4}}$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{比值判别法}
+% 	\linespread{1.5}
+% 	\begin{block}{{\bf 定理2.4.4}（d'Alembert判别法）\hfill P84}
+% 		设$a_n\geq 0(n=1,2,\ldots)$，$\limn\df{a_{n+1}}{a_n}=q$，则
+% 		\begin{enumerate}
+% 		  \item $0\leq q<1\Rightarrow\sumn a_n$收敛
+% 		  \item $q>1\Rightarrow\sumn a_n$发散
+% 		\end{enumerate}
+% 	\end{block}\pause 
+% 		{\bf 注：}$q=1$时无法直接判定，例如：$\sumn\df 1n$和$\sumn\df 1{n^2}$
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf 例7：}判断下列级数的收敛性\hfill P83-85-例5-7}
+% 		\begin{enumerate}\pause 
+% 		  \item $\sumn\df 1{2^n}\df{n^2+1}{2n^2-1}$\pause 
+% 		  \item $\sumn\df{n^2}{2^n}$\pause 
+% 		  \item $\sumn\df{(2n)!}{(n!)^2}$
+% % 		  \item $\sumn n!\left(\df{x}{n}\right)^n\quad (x>0)$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+% 
+% \begin{frame}{比值判别法的不等式形式}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf P88-11}\hfill}
+% 		设$a_n\geq 0\,(n=1,2,\ldots)$，则
+% 		\begin{enumerate}
+% 		  \item 若$n$充分大时，总有$\df{a_{n+1}}{a_n}\leq r<1$，则$\sumn a_n$收敛
+% 		  \item 若$n$充分大时，总有$\df{a_{n+1}}{a_n}\geq 1$，则$\sumn a_n$发散
+% 		\end{enumerate}
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{根值判别法}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理2.4.5}（Cauchy判别法）\hfill P85}
+% 		设$a_n\geq 0(n=1,2,\ldots)$，$\limn\sqrt[n]{a_n}=q$，则
+% 		\begin{enumerate}
+% 		  \item $0\leq q<1\Rightarrow\sumn a_n$收敛
+% 		  \item $q>1\Rightarrow\sumn a_n$发散
+% 		\end{enumerate}
+% 	\end{block}\pause
+% % 	\begin{exampleblock}{{\bf 例6}\hfill P86-例8}
+% % 		证明$\sumn\df{2+(-1)^n}{5^n}$收敛。
+% % 	\end{exampleblock}
+% % 	{\bf 注：}
+% 	\begin{itemize}
+% 	  \item $q=1$时，无法判定\pause
+% 	  \item 若$\limn\df{a_{n+1}}{a_n}=q$，则必有$\limn\sqrt[n]{a_n}=q$
+% 	\end{itemize}
+% \end{frame}
+% 
+% \begin{frame}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf 例8：}判断下列级数的收敛性\hfill P86-例8}
+% 		\begin{enumerate}\pause 
+% 		  \item $\sumn\df{2+(-1)^n}{5^n}$\pause
+% 		  \item $\sumn\df{n^2}{\left(2+\df 1n\right)^n}$\pause
+% 		  \item $\df 12+\df 1{3^2}+\df 1{2^3}+\df 1{3^4}+\df 1{2^5}+\df 1{3^6}+\ldots$
+% 		  %+\df 1{2^{2n-1}}+\df 1{3^{2n}}+\ldots$
+% % 		  \item $\sumn n!\left(\df{x}{n}\right)^n\quad (x>0)$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 概念：}$\sumn a_n=\limn\sum\limits_{k=1}^na_k$
+	  \item {\bf 性质：}
+	  \begin{itemize}
+	    \item $\sumn a_n$收敛$\Rightarrow\limn a_n=0$
+	    \item 改变有限项不改变级数的敛散性
+	    \item \alert{无穷级数的求和次序不能随便更改}
+	  \end{itemize}
+% 	  \item 级数收敛的“夹逼定理”
+% 	  \item {\bf 正项级数：}
+% 	  \begin{itemize}
+% 	    \item $\sumn a_n$收敛$\Leftrightarrow\{S_n\}$有界
+% 	    \item 比较判别法、比值判别法、根值判别法
+% 	  \end{itemize}
+	\end{enumerate}
+	\begin{exampleblock}{课后练习}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题2.3：4(3),6}
+	    \item 思考题：{\b 习题2.3：7,8}
+	  \end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{思考题}
+	\linespread{1.2}
+	\begin{exampleblock}{判断以下级数的敛散性；若收敛，求其和}
+		\begin{enumerate}
+		  \item $\sumn\ln\left(1+\df 1n\right)$
+		  \item
+		  $\sumn\left[\prod\limits_{k=0}^p(\alpha+n+k)\right]^{-1},\;(p\in\mathbb{N})$
+		  \item $\sumn\df{x^{2^{n-1}}}{1-x^{2n}}$
+		  \item $\sumn\df{1}{\sqrt n}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}[<+->]{判断下列级数的敛散性}
+% 	\linespread{2.5}
+% 	\begin{enumerate}
+% % 	  \item $\sumn\df{2^nn!}{n^n}$
+% 	  \item $\df 1{a+b}+\df 1{2a+b}+\df 1{3a+b}+\ldots\quad (a>0,b>0)$
+% % 	  \item $\sumn\df{1!+2!+\ldots+n!}{n!}$
+% % 	  \item $\sumn\left[\df 1n-\ln\left(1+\df 1n\right)\right]$
+% 	  \item $\sumn\df{\sqrt{n!}}{(2+\sqrt 1)(2+\sqrt 2)\ldots(2+\sqrt n)}$
+% 	  \item $\sumn\left[\df 1n-\ln\left(1+\df 1n\right)\right]$
+% 	  \item $\sumn\df{\sqrt{n+1}-\sqrt{n}}{n^p}\quad(p>0)$
+% % 	  \item $\sumn\df{n^{n+\frac 1{\,n\,}}}{\left(n+\df 1n\right)^n}$
+% 	\end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}[<+->]
+% 	\linespread{2.5}
+% 	\begin{enumerate}
+% 	  \addtocounter{enumi}{4}
+% % 	  \item $\sumn\df{2^nn!}{n^n}$
+% % 	  \item $\sumn\left[\df 1n-\ln\left(1+\df 1n\right)\right]$
+% % 	  \item $\sumn\left[\df 1n-\ln\left(1+\df 1n\right)\right]$
+% % 	  \item $\sumn n!\left(\df{x}{n}\right)^n\quad (x>0)$
+% 	  \item $\sumn n!\left(\df{x}{n}\right)^n\quad (x>0)$
+% 	  \item $\sumn\df {a_n}{(1+a_1)(1+a_2)\ldots(1+a_n)}\quad(a_n\geq
+% 	  0,n\in\mathbb{N})$
+% 	  \item $\sumn\df{n^{n+\frac 1{\,n\,}}}{\left(n+\df 1n\right)^n}$
+% 	\end{enumerate}
+% \end{frame}
+
+% \begin{frame}{小结}
+% 	\linespread{1.5}
+% 	\begin{enumerate}
+% 	  \item $\sumn a_n$收敛$\Rightarrow\limn a_n=0$
+% % 	  \item 级数收敛的“夹逼定理”
+% 	  \item {\bf 正项级数：}$a_n\geq 0\;(n\in\mathbb{N})$
+% 	  \begin{itemize}
+% 	    \item 正项级数$\sumn a_n$收敛$\Leftrightarrow\{S_n\}$有界
+% 	    \item 比较判别法
+% 	    \item 比值判别法
+% 	    \item 根值判别法
+% 	  \end{itemize}
+% 	\end{enumerate}
+% % 	\begin{exampleblock}{课后练习}
+% % 	  \begin{itemize}
+% % 	    \item 书面作业：{\b P76：3-6；\\
+% % 	    \P86：1(2-4),3(3-8),5(2,4),6(1-3),8,9}
+% % 	    \item 思考题：{\b P77-78：7,8；P87-88：10-15}
+% % 	  \end{itemize}
+% % 	\end{exampleblock}
+% \end{frame}

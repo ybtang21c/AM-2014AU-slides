@@ -1,0 +1,258 @@
+\begin{frame}{第十五讲、不定积分}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b（ \S 4.5 ）}
+	  \begin{itemize}
+	    \item 理解原函数与不定积分的概念
+% 	    \begin{itemize}
+% 	      \item 了解隐函数和参数方程的高阶导数计算方法
+% 	    \end{itemize}
+	    \item 熟练掌握基本的不定积分公式
+	    \item 熟练掌握不定积分的运算法则
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题4.5：1,4,5,6}
+ 	    \item 思考题：{\b 习题4.5：7-12}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{原函数与不定积分的概念}
+
+\begin{frame}{原函数与不定积分}
+	\linespread{1.4}
+	\pause
+% 	\vspace{-1ex}
+	\begin{block}{{\bf 定义4.5.1}\hfill P214}
+		若在区间$I$上，$f\,'(x)=f(x)$，则称$F(x)$是{\bb $f(x)$在区间$I$上的原函数}。
+	\end{block}\pause \bigskip
+	\begin{block}{\alert{{\bf 定理1}（原函数的性质）}}\pause
+		若$F(x)$是$f(x)$在区间$I$上的原函数，则\pause
+		\begin{enumerate}
+		  \item $F(x)+C$也是$f(x)$在区间$I$上的原函数\pause
+		  \item $f(x)$的任意两个原函数只相差一个常数
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{\bf 例1}
+		证明：函数$$f(x)=\left\{\begin{array}{ll}
+		0\;& x\ne 0\\1\;& x=0
+		\end{array}\right.$$在$\mathbb{R}$上不存在原函数
+	\end{exampleblock}
+	\pause
+	{\bf 注：}\alert{具有第一类间断点的函数都不存在原函数}\pause
+ 	\bigskip
+	\begin{block}{\alert{{\bf 定理2}（原函数的存在性）}}
+		若函数$f(x)$在区间$I$上连续，则在$I$上存在原函数。
+	\end{block}
+\end{frame}
+
+% \begin{frame}{原函数与不定积分}
+% 	\linespread{1.2}
+% 	\pause
+% % 	\vspace{-1ex}
+% 	\begin{block}{{\bf 定义4.5.1}\hfill P214}
+% 		若在区间$I$上，$f\,'(x)=f(x)$，则称$F(x)$是{\bb $f(x)$在区间$I$上的原函数}。
+% 	\end{block}\pause 
+% % 	\vspace{-1ex}
+% % 	\begin{itemize}
+% % 	  \item 任意函数的原函数不唯一\pause 
+% % 	  \item 函数$f(x)$的任意两个原函数之差为常数：
+% % % 	  \pause {\b {若$F_1(x),F_2(x)$均为$f(x)$在
+% % % 	  区间$I$上的原函数，\pause 则存在$C\in\mathbb{R}$，\pause 使对任意$x\in I$，\pause 恒有：
+% % % 	  $$F_1(x)-F_2(x)=C$$}}
+% % 	\end{itemize}\pause
+% % 	\vspace{-1ex}
+% 	\begin{exampleblock}{\bf 例1}
+% 		证明：函数$f(x)=\left\{\begin{array}{ll}
+% 		0\;& x\ne 0\\1\;& x=0
+% 		\end{array}\right.$不存在原函数
+% 	\end{exampleblock}
+% 	\pause
+% 	{\bf 注：}\alert{具有第一类间断点的函数都不存在原函数}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{block}{{\bf 定义4.5.2}\hfill P215}
+		函数$f(x)$在区间$I$上的全体原函数称为{\bb $f(x)$在$I$上的不定积分}，记为
+		$$\int f(x)\d x$$
+	\end{block}\pause 
+% 	\begin{itemize}
+% 	  \item $f(x)$：被积函数
+% 	  \item $x$：积分变量
+% 	  \item $f(x)\d x$：被积表达式
+% 	\end{itemize}
+	若$F(x)$是$f(x)$在区间$I$上的一个原函数，\pause 则
+	$$\alert{\int f(x)\d x=F(x)+C},$$
+	\pause 其中\alert{$C$为任意常数}。
+\end{frame}
+
+\begin{frame}
+	\linespread{2.5}
+	\begin{block}{{\bf 性质4.5.1}\hfill P215}\pause
+		\begin{enumerate}
+		  \item $\left(\displaystyle\int f(x)\d x\right)'=f(x)$\pause 
+		  \item $\d\left[\displaystyle\int f(x)\d x\right]=f(x)\d x$\pause 
+		  \item $\dint f\,'(x)\d x =f(x)+C$\pause
+		  \item $\dint \d f(x)=f(x)+C$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\section{基本不定积分公式}
+
+\begin{frame}{基本不定积分公式}
+	\linespread{1.2}\pause 
+	{\bf 求不定积分是求导的“逆运算”}
+	\begin{enumerate}\pause 
+	  \item $(C)'=0$\hfill \pause \alert{$\dint 0\d x=C$}\pause 
+	  \item $(x^a)'=ax^{a-1}$\hfill \pause \alert{$\dint
+	  x^a\d x=\df{1}{a+1}x^{a+1}+C$}\pause
+	  \item $(e^x)'=e^x$\hfill \pause \alert{$\dint e^x\d x=e^x+C$}\pause 
+	  \item $(a^x)'=a^x\ln a$\hfill \pause \alert{$\dint a^x\d x=\df{a^x}{\ln
+	  a}+C$}\pause
+	  \item $(\ln x)'=\df 1x$\hfill \pause \alert{$\dint \df 1x\d x=\ln|x|+C$}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{基本不定积分公式\small（续）}
+	\linespread{1.2}
+	\begin{enumerate}
+	  \addtocounter{enumi}{5}\pause 
+	  \item $(\sin x)'=\cos x$\hfill \pause \alert{$\dint \cos x\d x=\sin x+C$}\pause 
+	  \item $(\cos x)'=\sin x$\hfill \pause \alert{$\dint \sin x\d x=-\cos
+	  x+C$}\pause
+	  \item $(\tan x)'=\sec^2 x$\hfill \pause \alert{$\dint \sec^2 x\d x=\tan
+	  x+C$}\pause 
+	  \item $(\cot x)'=-\csc^2 x$\hfill \pause \alert{$\dint \csc^2 x\d x=-\cot
+	  x+C$}\pause
+	  \item \ldots\ldots
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{基本不定积分公式\small（续）}
+	\linespread{1.2}
+	\begin{enumerate}
+	  \addtocounter{enumi}{10}
+	  \item $(\arcsin
+	  x)'=\df{1}{\sqrt{1-x^2}}$\\ \hfill \pause 
+	  \alert{$\dint{\df{1}{\sqrt{1-x^2}}}\d x=\arcsin x+C$}\pause 
+	  \item $(\arctan x)'=\df{1}{1+x^2}$\\ \hfill\pause 
+	  \alert{$\dint \df{1}{1+x^2}\d x=\arctan x+C$}\pause 
+	  \item \ldots \ldots
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例2：}计算不定积分\hfill P217-218：例3-4}
+		\begin{enumerate}
+		  \item $\dint x^2\sqrt{x}\d x$\pause 
+		  \item $\dint \df{1}{x\sqrt[3]{x}}\d x$\pause 
+		  \item $\dint \df{4^x}{9^x}\d x$\pause 
+		  \item $\dint 2^x3^{2x}5^{3x}\d x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{不定积分的运算法则}
+
+\begin{frame}{不定积分的四则运算}
+	\linespread{1.2}
+	\begin{block}{{\bf 法则一}（线性运算）\hfill P218：性质4.5.2}
+		设函数$f(x),g(x)$的原函数存在，则
+% 		\vspace{-1ex}
+		$$\int[\alpha f(x)+\beta g(x)]\d x=\alpha\int f(x)\d x+\beta\int g(x)\d x,$$
+% 		\vspace{-1ex}
+		其中$\alpha,\beta$为任意常数。
+	\end{block}
+% 	\pause
+% 	\begin{block}{\alert{{\bf 法则二}（第一换元法）}}
+% 		设$F(x)$为$f(x)$的原函数，函数$u=\varphi(x)$可导，则
+% 		\vspace{-1em}
+% 		$$\int f[\varphi(x)]\varphi'(x)\d x=F[u]+C$$
+% 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例3}\hfill P219：例5-6}
+		\begin{columns}
+			\column{.4\textwidth}
+				\begin{enumerate}
+				  \item $\dint (x^2+1)^2\d x$\pause 
+				  \item $\dint\df{(x+1)^3}{x^2}\d x$\pause 
+				  \item $\dint\df{1-x^2}{x^2(1+x^2)}\d x$\pause 
+				\end{enumerate}
+			\column{.4\textwidth}
+				 \begin{enumerate}
+			        \addtocounter{enumi}{3}
+				    \item $\dint \df{x^4}{1+x^2}\d x$\pause 
+				    \item $\dint\df{1}{1+\cos 2x}\d x$\pause 
+				    \item $\dint\tan^2 x\d x$
+				 \end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{不定积分的换元法则}
+	\linespread{1.2}
+	\begin{block}{\alert{{\bf 法则二}（第一换元法）}}
+		设$F(x)$为$f(x)$的原函数，函数$u=\varphi(x)$可导，则
+% 		\vspace{-1em}
+		$$\int f[\varphi(x)]\varphi'(x)\d x=F(u)+C$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例4：}计算不定积分}
+		\begin{enumerate}\pause 
+		  \item $\dint \sin^3x\cos^22x\d x$\pause 
+		  \item $\dint \tan^3x\d x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{不定积分的应用}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例5}\hfill P220-例7}
+		已知曲线在点$(x,y)$处的斜率为$\sin x-\cos x$，且曲线过点$(\pi,0)$，求
+		该曲线的方程。
+	\end{exampleblock}
+	\bigskip
+	\pause 
+	\begin{exampleblock}{{\bf 例6}\hfill P220-例8}
+		汽车在高速公路上以90km/h的速度匀速行驶，在400m处看见前方出了事故立即刹车。求汽车以匀加速刹车，
+		需要多长时间才能在离事故现场25m处停车？
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 原函数与不定积分}
+	  $$\int f(x)\d x=F(x)+C$$
+	  \item {\bf 基本不定积分公式}
+	  \item {\bf 不定积分的运算法则}
+	  \begin{itemize}
+	    \item 四则运算
+	    \item 第一换元法
+	  \end{itemize}
+	\end{enumerate}
+% 	\bigskip
+% 	\pause
+% 	\centerline{\ba{请自行阅读第六章\S 6.3节}}
+\end{frame}
+
+
+%====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill }
+% 		123
+% 	\end{block}
+% \end{frame}

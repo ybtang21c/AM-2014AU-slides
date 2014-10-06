@@ -1,0 +1,171 @@
+\begin{frame}
+	\frametitle{习题课：积分}
+	\linespread{1.5}
+	{\bf 内容回顾}
+	\begin{enumerate}
+	  \item 不定积分的计算
+	    \item 定积分的概念与性质
+% 	    \begin{itemize}
+% 	      \item Rolle定理、Lagrange中值定理、Cauchy中值定理
+% 	    \end{itemize}
+	    \item Newton-Leibnitz公式
+	    \item 变限积分
+	    \item 定积分的计算
+% 	    \begin{itemize}
+% 	      \item 四则运算、反函数、复合函数
+% 	      \item 隐函数与参数方程
+% 	      \item 高阶导数
+% 	    \end{itemize}
+% 	    \item 微分的概念与应用
+	\end{enumerate}
+\end{frame}
+
+% \begin{frame}{积分第二中值定理}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例}\hfill }
+% 		\begin{enumerate}
+% 		  \item 设$f(x)$在$[a,b]$上单调递减非负，$g(x)$在$[a,b]$上可积，则
+% 		  存在$\xi\in[a,b]$，使得
+% 		  $$\dint_a^bf(x)g(x)dx=f(a)\dint_a^{\xi}g(x)dx$$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+
+\section{不定积分的计算}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例：}下列解法错在哪里？}
+		\begin{eqnarray*}
+			I&=&\dint\df{x\sin x}{\cos^3x}\d x
+			=\dint\df{(\pi-t)\sin t}{\cos^3 t}\d t\\
+			&=&\pi\dint\df{\sin t}{\cos^3t}\d t-\dint
+			\df{t\sin t}{\cos^3t}\d t\\
+			&=&\df{\pi}2\sec^2t-I
+		\end{eqnarray*}
+		从而$I=\df{\pi}4\sec^2x+C$
+	\end{exampleblock}
+\end{frame}
+
+\section{定积分的概念}
+
+\begin{frame}{定积分的概念}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例1}\hfill }
+		设$f(x)$满足方程
+		$$f(x)=3x-\sqrt{1-x^2}\dint_0^1f\,^2(x)\d x,$$
+		求$f(x)$。
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{利用定积分求极限}
+% 	\linespread{2}\pause 
+% 	\begin{exampleblock}{{\bf 例2：}计算下列极限\hfill P317-习题7}
+% 		\begin{enumerate}
+% 		  \item $\limn\df 1n\left[\sin\df{\pi}{n}+\sin\df{2\pi}{n}+\ldots
+% 		  +\sin\df{(n-1)\pi}{n}\right]$\pause 
+% 		  \item $\limn\left(\df{1}{n^2}+\df{2}{n^2}+\ldots+\df{n-1}{n^2}\right)$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% \end{frame}
+
+\section{积分估值问题}
+
+% \begin{frame}{积分估值问题}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例：}证明\hfill }
+% 		\begin{enumerate}
+% 		  \item $\limn\dint_n^{n+p}\df{\sin x}{x}dx=0,\quad (p>0)$
+% 		  \item $\limn\dint_0^{\pi/2}\sin^nxdx=0$
+% 		\end{enumerate}
+% 	\end{exampleblock}
+% 	$$\alert{\dint_0^{\pi/2}\sin^nxdx=\left\{
+% 	\begin{array}{ll}
+% 	\df{(n-1)!!}{n!!}\cdot 1, & \; n\mbox{为奇数}\\
+% 	\df{(n-1)!!}{n!!}\cdot\df{\pi}{2}, & \; n\mbox{为偶数}
+% 	\end{array}\right.}$$ 
+% \end{frame}
+
+\begin{frame}{积分估值问题}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例3：}（Schwarz不等式）\hfill P317-习题10}
+		设$f(x),g(x)$均在$[a,b]$上连续，证明：
+		$$\left[\dint_a^bf(x)g(x)\d x\right]^2
+		\leq\dint_a^bf\,^2(x)\d x\dint_a^bg^2(x)\d x$$
+	\end{exampleblock}\pause 
+	\begin{exampleblock}{{\bf 例4：}\hfill }
+		设$f(x)$在$[a,b]$上连续可微，$f(a)=0$，证明：
+		$$\dint_a^b[f(x)]^2\d x\leq\df{(b-a)^2}{2}\dint_a^b[f\,'(x)]^2\d x$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{积分估值问题}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例5：}求下列极限\hfill }\pause 
+		\begin{enumerate}
+		  \item $\limx{+\infty}\sqrt[3]x\dint_x^{x+1}\df{\sin t}{t+\cos t}\d t$\pause 
+		  \item $\limn f(n)\sin\df 1n$，其中
+		  $$f(x)=\dint_x^{x^2}\left(1+\df 1{2t}\right)^t\sin\df{1}{\sqrt t}\d t$$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{定积分的计算}
+
+\begin{frame}{定积分的计算}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例6：}计算下列定积分\hfill }\pause 
+		\begin{enumerate}
+		  \item $\dint_0^{2\pi}\sqrt{1+\cos\theta}\d\theta$\pause 
+		  \item $\dint_0^{\pi}(x\sin x)^2\d x$\pause 
+		  \item $\dint_0^{n\pi}x|\sin x|\d x$\pause 
+		  \item $\dint_0^1\df{\ln(1+x)}{1+x^2}\d x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{定积分变量替换}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例7：}证明\hfill }
+		$$\dint_1^af\left(x^2+\df{a^2}{x^2}\right)\df{\d x}{x}
+		=\dint_1^af\left(x+\df{a^2}{x}\right)\df{\d x}{x}$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{变限积分求导}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例8}\hfill }
+		设$\phi(x)=\dint_a^x(x+t)\varphi(t)\d t$，其中$\varphi(x)$可导，求
+		$\phi''(x)$。
+	\end{exampleblock}\pause 
+	{\bf 思考：}若$\phi(x)=\dint_a^x(x+t)\varphi(x+t)\d t$，结果如何？
+\end{frame}
+
+\begin{frame}{综合应用} 
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例9}\hfill }
+		设$f(x)$在$[0,2\pi]$上连续，证明：
+		$$\limn\dint_0^{2\pi}f(x)|\sin nx|\d x=\df 2{\pi}\dint_0^{2\pi}f(x)\d x$$
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{定积分的计算}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例：}计算定积分\hfill }
+% 		$$\dint_0^{\pi/2}\sin^nxdx$$
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}{课堂练习}
+	\linespread{1.2}\pause 
+	\begin{enumerate}
+	  \item 求$\limn\sum\limits_{k=1}^n\df{k}{n^3}\sqrt{n^2-k^2}$。\pause 
+	  \item 设$f(x)=\dint_1^x\df{\ln t}{1+t}\d t$，求$f(x)+f\left(\df
+	  1x\right)$。\pause
+	  \item 设$f(\pi)=2$，$\dint_0^{\pi}[f(x)+f\,''(x)]\sin x\d x=5$，求$f(0)$。\pause 
+	  \item 设$\limx{0}\df{1}{bx-\sin
+	  x}\dint_0^x\df{t^2}{\sqrt{a+t}}\d t=1$，求$a,b$。\pause 
+	  \item 求$\dint_{0}^{\pi}|\cos x|\sqrt{1+\sin^2x}\d x$。
+	\end{enumerate}
+\end{frame}
+

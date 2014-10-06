@@ -1,0 +1,329 @@
+\begin{frame}{第十八讲、可导函数的单调性与极值}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b（ \S 5.4 ）}
+	  \begin{itemize}
+	    \item 熟练掌握可导函数单调性的判定方法
+	    \item 熟练掌握可导函数极值的判定方法
+% 	    \item 掌握函数的分析作图法
+% 	    \item 熟练掌握L'Hospital法则
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：\\ {\b 习题5.4：6(2,4),8,9(1),11,13}
+ 	    \item 思考题：{\b 习题5.4：4,5,12}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{可导函数的单调性}
+
+\begin{frame}{可导函数的单调性}
+	\linespread{1.2}\pause 
+% 	$f'(x)>0\;(a<x<b)\quad \Rightarrow \quad f(x)$在$(a,b)$上严格单调递增
+	\begin{block}{{\bf 定理5.4.1}\hfill P263}
+		设$f(x)$在$[a,b]$上连续，$(a,b)$内可导，且$f\,'(x)$恒大（小）于零，则$f(x)$在
+		$[a,b]$上严格单调递增（减）。
+	\end{block} \pause
+	\begin{itemize}
+	  \item {以上仅仅是判定可导函数严格单调的充分条件，而非充要条件}\pause 
+	  \item {若定理中的“大（小）于”改成“大（小）于等于”，则对应于单调递增情形，且为充要条件}
+	\end{itemize}
+\end{frame}
+
+% \begin{frame}[t]{可导函数的单调性}
+% 	\linespread{1.2}\pause 
+% % 	$f'(x)>0\;(a<x<b)\quad \Rightarrow \quad f(x)$在$(a,b)$上严格单调递增
+% 	\begin{block}{{\bf 定理5.4.1}\hfill P263}
+% 		设$f(x)$在$[a,b]$上连续，$(a,b)$内可导，且$f\,'(x)$恒大（小）于零，则$f(x)$在
+% 		$[a,b]$上严格单调递增（减）。
+% 	\end{block} 
+% 	\only<3>{\begin{exampleblock}{{\bf 例1}\hfill}
+% 		设$f(x)\in C[a,b]$，在$(a,b)$内$f\,''(x)>0$，
+% 		证明：
+% 		$$F(x)=\df{f(x)-f(a)}{x-a}$$
+% 		在$(a,b)$内严格单调递增。
+% 	\end{exampleblock}}
+% 	\pause \pause
+% 	\begin{itemize}
+% 	  \item \alert{以上仅仅是判定可导函数严格单调的充分条件，而非充要条件}\pause 
+% 	  \item \alert{若定理中的“大（小）于”改成“大（小）于等于”，则对应于单调递增情形，且为充要条件}
+% 	\end{itemize}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例1}\hfill P264：例1-2}
+		讨论$y=x-\sin x$的单调性。
+	\end{exampleblock}\pause 
+	\bigskip
+	\begin{alertblock}{{\bf 定理}（可导函数单调的充要条件）\hfill}
+		设$f(x)$在$[a,b]$上连续，$(a,b)$内可导，则$f(x)$在$[a,b]$上严格单调递增，
+		当且仅当：
+		\begin{enumerate}
+		  \item $f\,'(x)\geq 0,\;x\in(a,b)$
+		  \item 在$(a,b)$的任意子区间上$f\,'(x)$不恒为零
+		\end{enumerate}
+	\end{alertblock}\pause
+	{\bf 注：}导函数只有{\bb 孤立零点}的函数严格单调
+\end{frame}
+
+\begin{frame}{单调性的应用}
+	\linespread{1.2}
+	\begin{alertblock}{{\bf 推论1}\hfill}
+		设$\varphi(x),\psi(x) $均在$[a,b]$上可导，且：
+		\begin{enumerate}
+		  \item $\varphi'(x)>\psi'(x),\;x\in(a,b)$
+		  \item $\varphi(a)=\psi(a)$
+		\end{enumerate}
+		则在$(a,b)$上，恒有$\varphi(x)>\psi(x)$
+	\end{alertblock}\pause 
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		证明：当$x>0$时，恒有
+		$$x-\df 16x^3<\sin x<x.$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{alertblock}{{\bf 推论2}\hfill}
+		设$\varphi(x),\psi(x) $均在$[a,b]$上{\b $n$阶可导}，且：
+		\begin{enumerate}
+		  \item {\b $\varphi^{(n)}(x)>\psi^{(n)}(x),\;x\in(a,b)$}
+		  \item {\b $\varphi^{(k)}(a)=\psi^{(k)}(a),k=0,1,2,\ldots,n-1$}
+		\end{enumerate}
+		则在$(a,b)$上，恒有$\varphi(x)>\psi(x)$
+	\end{alertblock}
+	\pause
+	\begin{exampleblock}{{\bf 例3：}证明下列不等式\hfill}
+% 		证明：当$x>0$时，
+% 		$$\ln(1+x)>\df{\arctan x}{1+x}$$
+		\begin{enumerate}
+		  \item $\ln(1+x)>\df{\arctan x}{1+x},\;(x>0)$\pause
+		  \item $e^x>1+x+\df
+		  {x^2}{2!}+\df{x^3}{3!}+\ldots+\df{x^n}{n!},\;(x>0,n\in\mathbb{N})$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{可导函数的极值}
+
+% \begin{frame}{函数单调性的判定}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理5.4.1}\hfill P263}
+% 		设$f(x)$在$[a,b]$上连续，$(a,b)$内可导，则\pause 
+% 		\begin{enumerate}
+% 		  \item 若对任意$x\in(a,b)$，$f\,'(x)>0$，则$f(x)$在$[a,b]$上严格单调递增\pause 
+% 		  \item 若对任意$x\in(a,b)$，$f\,'(x)<0$，则$f(x)$在$[a,b]$上严格单调递减
+% 		\end{enumerate}
+% 	\end{block}\pause 
+% 	\begin{exampleblock}{{\bf 例1}\hfill P264：例1-2}
+% 		讨论$y=x-\sin x$与$y=e^x-x-1$的单调性。
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}{函数极值的判定}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理5.4.2}（极值第一充分条件）\hfill P265}\pause 
+		设$f(x)$在$x_0$连续，在$x_0$的去心领域内可导，且$f\,'(x)$在$x_0$两侧导数值异号，则
+		$f(x)$在$x_0$处取极值。\pause 
+	\end{block}
+	\begin{exampleblock}{{\bf 例4：}讨论以下函数的极值\hfill }
+		\begin{enumerate}
+		  \item $f(x)=2-|x^3-1|$\pause
+		  \item $f(x)=\left(1+x+\df{x^2}{2!}+\ldots+\df{x^n}{n!}\right)e^{-x}$ 
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{{函数极值的判定}{\small (续)}}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理5.4.3}（极值第二充分条件）\hfill P267}\pause 
+		设$f(x)$在$x_0$二阶可导，且$f\,'(x_0)=0$，则
+		\begin{enumerate}\pause 
+		  \item 若$f\,''(x_0)<0$，$f(x)$在$x_0$处取极大值\pause 
+		  \item 若$f\,''(x_0)>0$，$f(x)$在$x_0$处取极小值
+		\end{enumerate}
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例5：}讨论以下函数的极值}
+% 		求函数$f(x)=x^3-6x^2+5$的极值。
+		\begin{enumerate}
+		  \item $f(x)=x^3-6x^2+5$\hfill (P267-例4)\pause
+		  \item $f(x)=\cos x+\df12\cos 2x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}
+
+% \begin{frame}{综合应用}
+% 	\linespread{1.2}\pause 
+% 	\begin{exampleblock}{{\bf 例4}\hfill P268：例5}
+% 		证明：当$0<x_1<x_2<\df{\pi}{2}$时，
+% 		$$\df{\tan x_2}{\tan x_1}>\df{x_2}{x_1}$$
+% 	\end{exampleblock}\pause 
+% 	\begin{exampleblock}{{\bf 例5}\hfill P269：例6}
+% 		证明：
+% 		$$e^{-x}+\sin x<1+\df{x^2}{2},\;0<x<\df{\pi}{2}$$
+% 	\end{exampleblock}
+% \end{frame}
+
+\section{综合应用}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		函数$f(x)$对满足
+		$$xf\,''(x)+3x[f\,'(x)]^2=1-e^{-x}$$
+		\vspace{-2em}
+		\begin{enumerate}
+		  \item 若$f(x)$在$x=c\ne 0$处有极值，证明其必为极小值；\pause
+		  \item 若$f(x)$在$x=0$处有极值，该极值为极大还是极小？
+		\end{enumerate}
+	\end{exampleblock}
+	\pause
+	\bigskip
+		\begin{exampleblock}{{\bf 例7}\hfill P280：习题7}
+		求数列$\sqrt[n]n$中最大的一项。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例8}\hfill P270：例7}
+		判定方程$2^x-2x=1$有几个实根。
+	\end{exampleblock}
+	\pause
+	\bigskip
+	\begin{exampleblock}{{\bf 例9}\hfill}
+		已知$x>0$时，
+		$$kx+\df1{x^2}=1$$
+		有且仅有一个根，求$k$的取值范围。
+	\end{exampleblock}
+	\pause
+	{\bf 答案：}$k<0$或$k=\df29\sqrt 3$
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例10}\hfill}
+		设$f(x)\in C[a,b]$，在$(a,b)$内$f\,''(x)>0$，试讨论
+		$$F(x)=\df{f(x)-f(a)}{x-a}$$
+		在$(a,b)$内的单调性。
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例8}\hfill P270：例9}
+% 		垂直于宽度为$a$的河道，开挖一条宽度为$b$的运河，问能驶进运河的船只，最大长度是多少？
+% 	\end{exampleblock}
+% \end{frame}
+
+% \section{函数的凹凸性}
+% 
+% \begin{frame}{函数的凹凸性}
+% 	\linespread{1.2}\pause 
+% 	{\bf 问题：}如何定义函数的凸、凹？\pause 
+% 	\begin{block}{{\bf 定义5.4.1}（凹函数）\hfill P273}
+% 		设函数$f(x)$在区间$I$上有定义，若对任意$x_1,x_2\in I$，以及任意$\lambda\in[0,1]$，
+% 		有
+% 		$$f[\lambda x_1+(1-\lambda)x_2]\leq \lambda f(x_1)+(1-\lambda)f(x_2) $$
+% 		则称$f(x)$是区间$I$上的{\bb 凹函数}。\pause 若上式中的等号严格成立，则称其为{\bb 严格凹函数}。
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{凹函数的充要条件}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理5.4.4}\hfill P275}
+% 		设$f(x)$在$(a,b)$内可导，则$f(x)$为$(a,b)$内的凹函数，当且仅当：对任意$x_1,x_2\in(a,b)$，
+% 		恒有
+% 		$$f(x_2)\geq f(x_1)+f\,'(x_1)(x_2-x_1). $$
+% 		\pause 不等号严格成立时，对应于严格凹函数的情形。
+% 	\end{block}
+% \end{frame}
+% 
+% \begin{frame}{凹函数的判定}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理5.4.5}\hfill P276}
+% 		设$f(x)$在$(a,b)$二阶可导，则\pause 
+% 		\begin{enumerate}
+% 		  \item 若$f\,''(x)$恒不小于零，$f(x)$为凹函数\pause 
+% 		  \item 若$f\,''(x)$恒不大于零，$f(x)$为凸函数
+% 		\end{enumerate}
+% 	\end{block}\pause 
+% 	{\bb 拐点：}$f\,''(x)=0$的点\pause 
+% 	\begin{block}{{\bf 推论}\hfill P276：例11}
+% 		证明：严格凸（凹）函数的驻点为极值点。
+% 	\end{block}
+% \end{frame}
+% 
+% \section{分析作图法}
+% 
+% \begin{frame}{分析作图法}
+% 	\linespread{1.2}\pause 
+% 	\begin{exampleblock}{{\bf 例9}\hfill P279-例14}
+% 		作出函数$y=\df{x}{1+x^2}$的图形。
+% 	\end{exampleblock}\pause 
+% 	\begin{enumerate}
+% 	  \item {\bf 分析函数一般性质：}定义域、值域、奇偶性、周期性、与坐标轴的交点\pause 
+% 	  \item {\bf 求一、二阶导函数：}确定不可导点\pause 
+% 	  \item {\bf 列表分析：}单调、凸凹区间，极值点和拐点\pause 
+% 	  \item {\bf 画出渐进线：}水平、铅直和斜渐进线\pause 
+% 	  \item {\bf 描点作图}
+% 	\end{enumerate}
+% \end{frame}
+% 
+% \begin{frame}{渐进线}
+% 	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理3.3.5}\hfill P134}
+% 		\begin{enumerate}\pause 
+% 		  \item {\bb 水平渐近线：}$\limx{\pm\infty}f(x)=b$\pause 
+% 		  \item {\bb 铅直渐近线：}$\limx{a^{\pm}}f(x)=\infty$\pause 
+% 		  \item {\bb 斜渐近线：}\pause 
+% 		  \begin{itemize}
+% 		    \item 斜率：$k=\limx{\pm\infty}\df{f(x)}{x}$\pause 
+% 		    \item 截距：$b=\limx{\pm\infty}[f(x)-kx]$
+% 		  \end{itemize}
+% 		\end{enumerate}
+% 	\end{block}
+% \end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+%  	{\ba{问题：}}{\b 如何求闭区间上函数的最值和最值点？}\bigskip\pause
+	\begin{enumerate}
+	  \item {\bf 可导函数的单调性}
+	  \begin{itemize}
+	    \item 充分条件与充要条件
+	    \item 用单调性证明不等式
+% 	    \item 凸凹性
+% 	    \item 拐点
+	  \end{itemize}
+	  \item {\bf 可导函数的极值}
+% 	  \begin{itemize}
+% 	    \item 充分条件与充要条件
+% 	    \item 用单调性证明不等式
+% % 	    \item 凸凹性
+% % 	    \item 拐点
+% 	  \end{itemize}
+	\end{enumerate}
+% 	\bigskip
+% 	\pause
+% 	\centerline{\ba{请自行阅读第六章\S 6.3节}}
+\end{frame}
+
+%=====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

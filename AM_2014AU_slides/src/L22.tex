@@ -1,0 +1,209 @@
+\begin{frame}
+	\frametitle{习题课、导数与微分的应用}
+	\linespread{1.5}
+	{\bf 内容回顾}
+	\begin{enumerate}
+	    \item 中值定理
+	    \begin{itemize}
+	      \item Rolle定理、Lagrange中值定理、Cauchy中值定理
+	    \end{itemize}
+	    \item L'Hospital法则
+	    \item Taylor公式
+% 	    \begin{itemize}
+% 	      \item 四则运算、反函数、复合函数
+% 	      \item 隐函数与参数方程
+% 	      \item 高阶导数
+% 	    \end{itemize}
+% 	    \item 微分的概念与应用
+	\end{enumerate}
+\end{frame}
+
+% \section{极限的计算}
+
+% \section{中值定理}
+
+% \begin{frame}{中值定理与Taylor公式相关证明题}
+% 	\linespread{1.5}
+% 	\begin{enumerate}
+% 	  \item {\bf 函数性质}
+% 	  \begin{itemize}
+% 	    \item 单调性、值域、凸凹性
+% 	  \end{itemize}
+% 	  \item {\bf }
+% 	\end{enumerate}
+% 	\begin{exampleblock}{{\bf title}\hfill }
+% 		123
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}{中值定理与函数性质}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例1}\hfill }
+		设$\limx{+\infty}f(x)$和$\limx{+\infty}f\,'(x)$均存在，证明：
+		$$\limx{+\infty}f\,'(x)=0.$$
+	\end{exampleblock}\pause 
+% 	{\bf 思考：}
+% 	\begin{itemize}
+% 	  \item $\limx{+\infty}f(x)$和$\limx{+\infty}f\,'(x)$中有一个存在，是否能够推出另一个也存在？
+% 	  \item 若$\limx{+\infty}f\,'(x)=l\ne 0$，能够推出$\limx{+\infty}f(x)$的什么性质？
+% 	\end{itemize}
+	\begin{exampleblock}{{\bf 例2}\hfill}
+		设$f(x)$在$U(x_0)$内连续，在$U^0(x_0)$内可导，且$\limx{x_0}f\,'(x)=l$，则
+		$$f\,'(x_0)=l.$$
+	\end{exampleblock}
+% 	\bigskip
+% 	\begin{exampleblock}{{\bf 例2}\hfill }
+% 		$f(x)$在$(a,+\infty)$上可导，$\limx{+\infty}f\,'(x)=0$，则：
+% 		$$\limx{+\infty}\df{f(x)}{x}=0.$$
+% 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{等式证明}
+	\linespread{1.5}\pause 
+	\begin{exampleblock}{{\bf 例3}\hfill}
+		设$f(x)$在$[a,b]$连续，在$(a,b)$可导，且$a\geq 0$，则存在
+		$x_1,x_2,x_3\in(a,b)$，使得
+		$$f\,'(x_1)=(b+a)\df{f\,'(x_2)}{2x_2}=(a^2+ab+b^2)\df{f\,'(x_3)}{3x_3^2}$$
+	\end{exampleblock}\pause 
+	{\bf 注：}\alert{在使用中值定理前对要证明的等式进行必要的“整理”}
+\end{frame}
+
+\begin{frame}{辅助函数的构造}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例4}\hfill }
+		设$f(x),g(x)\in C[a,b]$，在$(a,b)$内可导，且$f(a)=f(b)=0$，证明：存在
+		$\xi\in(a,b)$，使得：
+		\vspace{-1ex}
+		$$f\,'(\xi)+f(\xi)g'(\xi)=0.$$
+	\end{exampleblock}\pause 
+	\begin{itemize}
+	  \item \alert{$y+\lambda y'=0$：\pause $F(x)=e^{\lambda x}y$}\pause 
+	  \item \alert{$ny+xy'=0$：\pause $F(x)=x^ny$}\pause 
+	  \item \alert{$f\,'(x)g(x)-f(x)g'(x)=0$：\pause $F(x)=\df{f(x)}{g(x)}$}
+	\end{itemize}
+% 	\begin{exampleblock}{{\bf 例4}\hfill }
+% 		设$f(x),g(x)$在$[a,b]$上可导，且恒不为零，\vspace{-1ex}
+% 		$$\df{f\,'(x)}{f(x)}=\df{g'(x)}{g(x)},$$
+% % 		\vspace{-2ex}
+% 		证明：存在常数$k\ne 0$，使得$f(x)=kg(x)$对任意$x\in[a,b]$成立。
+% 	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}%{特殊点的性质}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf 例5}\hfill }
+% 		证明：当$x\geq 0$时，
+% 		$$\sqrt{x+1}-\sqrt{x}=\df{1}{2\sqrt{x+\theta_x}},$$
+% 		其中$\df 14\leq \theta_x \leq \df 12$，且
+% 		$$\limx{0^+}\theta_x=\df 14,\quad \limx{+\infty}\theta_x=\df 12.$$
+% 	\end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{辅助函数的构造}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例3}\hfill }
+% 		设$f(x),g(x)\in C[a,b]$，在$(a,b)$内可导，且$f(a)=f(b)=0$，证明：存在
+% 		$\xi\in(a,b)$，使得：
+% 		$$f\,'(\xi)+f(\xi)g'(\xi)=0.$$
+% 	\end{exampleblock}
+% 	\begin{exampleblock}{{\bf 例4}\hfill }
+% 		设$f(x),g(x)$在$[a,b]$上可导，且恒不为零，
+% 		$$\df{f\,'(x)}{f(x)}=\df{g'(x)}{g(x)},$$
+% 		证明：存在常数$k\ne 0$，使得$f(x)=kg(x)$对任意$x\in[a,b]$成立。
+% 	\end{exampleblock}
+% \end{frame}
+
+\begin{frame}{证明不等式}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例6}\hfill}
+		证明：若在$(a,b)$内，$f\,''(x)>0$，则对任意$a<x_1<x_2<b$，恒有
+		$$f\left(\df{x_1+x_2}{2}\right)<\df{f(x_1)+f(x_2)}{2}.$$
+	\end{exampleblock}\pause 
+	{\bf 思考：}以上结论能否进一步推广？\pause 
+	$$\alert{f(\lambda x_1+(1-\lambda)x_2)<\lambda
+	f(x_1)+(1-\lambda)f(x_2),\;0<\lambda<1}$$
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例7}\hfill }
+		$f(x)$在$[0,1]$上有二阶连续导数，且$f(0)=f(1)$，\\$|f\,''(x)|\leq A$，
+		证明：对任意$x\in[0,1]$，恒有
+		$$|f\,'(x)|\leq\df A2.$$
+	\end{exampleblock}\pause 
+	{\bf 用Taylor公式证明等式或不等式}\pause 
+	\begin{itemize}
+	  \item \alert{多使用Lagrange余项}\pause 
+	  \item \alert{特殊的点：\pause 区间端点、\pause 极（最）值点、\pause
+	  区间中点、\pause 距离为常数的点、\pause 已知条件中提到的特殊点}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{exampleblock}{{\bf 例8}\hfill }
+		设$f(x)$在$[a,b]$上二阶连续可导，且$f\,'(a)=f\,'(b)$\\ $=0$，
+		则至少存在一点
+		$c\in(a,b)$，使得
+		$$|f\,''(c)|\geq \df 4{(b-a)^2}|f(b)-f(a)|.$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{极限的计算}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例9：}计算下列极限\hfill}
+		\begin{columns}\pause 
+			\column{.48\textwidth}
+				\begin{enumerate}
+				  \item $\limx{0}\df{e^x-e^{-x}-2x}{x-\sin x}$\pause 
+				  \item $\limx{0}\df{e^{-1/x^2}}{x^{100}}$\pause 
+				  \item $\limx{a}\df{x^a-a^x}{x^x-a^a}\;(a>0)$\pause 
+				\end{enumerate}	
+			\column{.52\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{3}
+				  \item $\limx{0}\left(\df{a^x+b^x+c^x}{3}\right)^{1/x}$\pause 
+				  \item $\limn\sqrt{n}(\sqrt[n]{n}-1)$\pause 
+				  \item $\limn\left(n\sin\df{1}{n}\right)^{n^2}$
+				\end{enumerate}	
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{课堂练习}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例10：}计算下列极限\hfill}
+		\begin{enumerate}
+% 		  \item $\limx{0}\df{e^x-1-x}{\df{1}{\sqrt{1-x}-\cos\sqrt x}}$
+		  \item $\limx{0}\df{\cos(\sin x)-\cos x}{x^4}$
+		  \item $\limx{+\infty}\left[x-x^2\ln\left(1+\df 1x\right)\right]$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+
+
+% \begin{frame}{函数性质}
+% 	\linespread{1.2}
+% 	\begin{exampleblock}{{\bf 例15}\hfill}
+% 		证明：若在$(a,b)$内，$f\,''(x)>0$，则对任意$a<x_1<x_2<b$，恒有
+% 		$$f\left(\df{x_1+x_2}{2}\right)<\df{f(x_1)+f(x_2)}{2}.$$
+% 	\end{exampleblock}\pause 
+% 	{\bf 思考：}以上结论能否进一步推广？\pause 
+% 	$$\alert{f(\lambda x_1+(1-\lambda)x_2)<\lambda
+% 	f(x_1)+(1-\lambda)f(x_2),\;0<\lambda<1}$$
+% \end{frame}
+% 
+% % \section{辅助函数的构造}
+% 
+% 
+% 
+
+%=================================
+
+% \begin{frame}{title}
+% 	\linespread{1.5}
+% 	\begin{exampleblock}{{\bf title}\hfill }
+% 		123
+% 	\end{exampleblock}
+% \end{frame}

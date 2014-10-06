@@ -1,0 +1,177 @@
+\begin{frame}{第十二讲、导数的计算}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b（ \S4.2 ）}
+	  \begin{itemize}
+	    \item 熟练掌握导数运算的基本方法
+	    \begin{itemize}
+	      \item 四则运算的求导法则
+	      \item 反函数求导法则
+	      \item 复合函数求导法则
+	    \end{itemize}
+	    \item 熟练掌握常用初等函数的导函数
+	    \item 掌握高阶导数的求导方法
+% 	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题4.2：1,4,6,12,18,20}
+	    \item 思考题：{\b 习题4.2：5,8,9,22-24}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{四则运算的求导法则}
+
+\begin{frame}{四则运算的求导法则}
+	\linespread{2}\pause 
+	\begin{block}{{\bf 定理4.2.1}\hfill P169}\pause 
+		设$u(x),v(x)$均在$x$可导，则
+% 		则$u(x)+v(x),u(x)v(x)$和$\df{u(x)}{v(x)}(v(x)\ne 0)$均在$x$可导，且
+		\begin{enumerate}
+		  \item $[u(x)\pm v(x)]'=u'(x)\pm v'(x)$\pause 
+		  \item $[u(x)v(x)]'\pause =u'(x)v(x)+u(x)v'(x)$\pause 
+		  \item
+		  $\left[\df{u(x)}{v(x)}\right]'\pause
+		  =\df{u'(x)v(x)-u(x)v'(x)}{v^2(x)}\;(v(x)\ne 0)$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例1：}计算以下函数的导函数\hfill P172-例2-4}
+		\begin{enumerate}
+		  \item $f(x)=2x^3+3x-4x+5-\df 6x$\pause 
+		  \item $f(x)=e^x\sin x$\pause 
+		  \item $f(x)=\df{x-1}{x+1}$\pause 
+		  \item $f(x)=\df 1{\ln x}$\pause 
+		  \item $f(x)=\tan x$\pause \hfill $f\,'(x)=\sec^2 x$\pause 
+		  \item $f(x)=\sec x$\pause \hfill $f\,'(x)=\sec x\tan x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{反函数求导法则}
+
+\begin{frame}{反函数求导法则}
+	\linespread{1}\pause 
+	\begin{block}{{\bf 定理4.2.2}\hfill P173}
+		设$y=f(x)$是$x=\varphi(y)$的反函数，若$x=\varphi(y)$在$y$处可导，且$\varphi'(x)\ne 0$，则
+		$y=f(x)$在点$x=\varphi(y)$处可导，且
+		$$f\,'(x)=\df{1}{\varphi'(y)}$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例2：}计算下列函数的导函数\hfill P174-例7-8}
+		\begin{enumerate}
+		  \item $f(x)=\arcsin x$\pause \hfill $f\,'(x)=\df{1}{\sqrt{1-x^2}}$\pause 
+		  \vspace{-1ex}
+		  \item $f(x)=\arctan x$\pause \hfill $f\,'(x)=\df{1}{1+x^2}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\section{复合函数的求导法则}
+
+\begin{frame}{复合函数的求导法则}
+	\linespread{1.5}\pause 
+	\begin{block}{{\bf 定理4.2.3}(链式法则)\hfill P175}
+		设函数$u=\varphi(x)$在$x$处可导，函数$y=f(u)$在$u=\varphi(x)$
+		处可导，则复合函数$y=f[\varphi(x)]$在$x$处可导，且
+		$$y'_x=f\,'(u)\varphi'(x)$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例3：}计算下列函数的导函数\hfill P176-例15}
+		\begin{enumerate}
+		  \item $y=a^x\;(a>0,a\ne 1)$\pause \hfill $y'=a^x\ln a$\pause 
+		  \item $y=x^a$\pause \hfill $y'=ax^{a-1}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：}计算下列函数的导函数 \hfill P176-例10-19}
+		\begin{enumerate}
+		  \item $y=e^{x^2}$\pause 
+		  \item $y=\sin (3x+2)$\pause 
+		  \item $y=\cos^2(1-2x)$\pause 
+		  \item $y=\ln\sin e^{-x}$\pause 
+		  \item $y=(1-30x)^{50}$\pause 
+		  \item $y=\ln(1+x^2)$\pause 
+		  \item $y=e^{\sqrt{1-3x}}$\pause 
+		  \item $y=x^x$\pause 
+		  \item $y=e^{\tan\frac 1x}$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：} \hfill P180-例20}
+		设$f(x)$可导，且$f\,'\left(\df{\pi}{4}\right)=1$，求
+		$$\varphi(x)=f\left(\arctan\df{1+x}{1-x}\right)$$
+		在$x=0$处的导数。
+	\end{exampleblock}
+\end{frame}
+
+\section{高阶导数}
+
+\begin{frame}{高阶导数}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定义4.2.1}\hfill P180}
+		$$f^{\,(n)}(x)=\left[f^{\,(n-1)}(x)\right]'_x$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例5：} \hfill P181-例34}
+		求函数
+		$$f(x)=x^3+2x^2-3x+10$$
+		的各阶导函数。
+	\end{exampleblock}\pause 
+	{\bf 注：}\alert{若$P(x)$为$n$次多项式，则$P^{(n+1)}(x)=0$}
+\end{frame}
+
+\begin{frame}
+	\linespread{2}
+	\begin{exampleblock}{{\bf 例6：}求以下函数的$n$阶导数 \hfill P182-例25-26}
+		\begin{enumerate}
+		  \item $y=\df 1x$\pause \hfill $y^{(n)}(x)=(-1)^n\df{n!}{x^{n+1}}$\pause 
+		  \item $y=\sin x$\pause \hfill
+		  $y^{(n)}(x)=\sin\left(\df{n\pi}{2}+x\right)$\pause 
+		  \item $y=xe^x$\pause \hfill $y^{(n)}(x)=(n+x)e^x$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	{\bb Leibnitz公式}
+	$$\alert{\left[u(x)v(x)\right]^{(n)}=\sum\limits_{k=0}^nC_n^ku^{(n-k)}(x)v^{(k)}(x)}$$
+	\pause 
+	\begin{exampleblock}{{\bf 例7}\hfill P184-例27}
+		设$y=x^3e^x$，求$y^{(10)}$。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 导数运算的基本方法：}
+	  \begin{itemize}
+	    \item 四则运算
+	    \item 反函数
+	    \item 复合函数
+	  \end{itemize}
+	  \item {\bf 常用初等函数的导函数}
+	  \item {\bf 高阶导数}
+	  \begin{itemize}
+	    \item 一些特殊函数的高阶导数
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

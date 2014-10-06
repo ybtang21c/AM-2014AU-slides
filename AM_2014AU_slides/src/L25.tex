@@ -1,0 +1,249 @@
+\begin{frame}{第二十五讲、微积分基本公式与定积分的计算}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\b（ \S 6.2，\S 6.3.3 ）}
+	  \begin{itemize}
+	    \item 熟练掌握微积分基本公式
+	    \item 理解变限积分函数及其性质
+	    \item 熟练掌握定积分的计算方法
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后作业：}
+	  \begin{itemize}
+% 	    \item 书面作业：\\
+	    \item {\b 习题6.2：1(5-8),2,3(3,4),4,6,7,8,13,15}
+	    \item {\b 习题6.3：8,9,12,14,18}
+%  	    \item 思考题：{\b 习题6.1：7,8,9,10}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[<+->]{复习与回顾}
+	\linespread{1.2}
+	\begin{enumerate}
+	  \item {\bf 定积分的定义：}{\b 分割、取近似，做和、求极限}
+	  $$\dint_a^bf(x)\d x=\lim\limits_{\lambda\to
+		0}\sum\limits_{k=1}^nf(\xi_k)\Delta x_k$$
+	  \item {\bf 定积分的性质}
+	  \begin{itemize}
+	    \item 线性性、区间可加性
+	    \item 保号性、保序性、定积分的估值
+	    \item 定积分中值定理
+	    $$\dint_a^bf(x)\d x=f(\xi)(b-a)$$
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{微积分基本公式}
+
+\begin{frame}{微积分基本公式}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理6.2.1}（Newton-Leibnitz公式）\hfill P319}
+		设函数$f(x)$在区间$[a,b]$上可积，$F(x)$是$f(x)$在$[a,b]$上的一个原函数，则
+		$$\dint_a^bf(x)\d x=F(b)-F(a).$$
+	\end{block}\pause 
+	\begin{exampleblock}{{\bf 例1：}计算下列定积分\hfill P320}
+		\begin{columns}
+			\column{.30\textwidth}
+			\begin{enumerate}\pause 
+			  \item $\dint_{0}^{1}x^2 \d x$
+			\end{enumerate}
+			\column{.37\textwidth}
+			\begin{enumerate}\pause 
+			  \addtocounter{enumi}{1}
+			  \item $\dint_{-1}^{\sqrt 3}\df 1{1+x^2}\d x$
+			\end{enumerate}
+			\column{.33\textwidth}
+			\begin{enumerate}\pause 
+			  \addtocounter{enumi}{2}
+			  \item $\dint_{-1}^{-2}\df 1x\d x$
+			\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\section{变限积分及其性质}
+
+\begin{frame}{变限积分的概念}
+	\linespread{1.2}\pause 
+	\begin{exampleblock}{{\bf 例2}\hfill }
+		求$F(x)=\dint_0^x[\,t\,]\d t,\;(x>0)$的表达式，其中$[\,x\,]$为下取整函数。
+	\end{exampleblock}\pause 
+	\begin{block}{{\bf 定理6.2.2}\hfill P323}
+		若$f(x)$在$[a,b]$上可积，则{\bb 变上限积分}
+		$$\Phi(x)=\dint_a^xf(t)\d t$$
+		在$[a,b]$上连续。
+	\end{block}
+% 	\begin{exampleblock}{{\bf 例2}\hfill P325-例8}
+% 		已知$f(x)=\left\{\begin{array}{ll}
+% 		x,&\quad 0\leq x\leq 1\\ 1, &\quad x>1
+% 		\end{array}\right.$，求$F_1(x)=\dint_0^xf(t)dt$和$F_2(x)=\dint_1^xf(t)dt$
+% 	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{变限积分的性质}
+	\linespread{1.2}\pause 
+% 	\begin{block}{{\bf 定理6.2.2}\hfill P323}
+% 		若$f(x)$在$[a,b]$上可积，则{\bb 变上限积分}
+% 		$$\Phi(x)=\dint_a^xf(t)dt$$
+% 		在$[a,b]$上连续。
+% 	\end{block}
+	\begin{block}{{\bf 定理6.2.3}\hfill P323}
+		若$f(x)$在$[a,b]$上连续，则$\Phi(x)=\dint_a^xf(t)\d t$在$[a,b]$可导，且
+		$$\Phi'(x)=f(x)$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item \alert{若$f(x)$连续，则变上限积分$\Phi(x)=\dint_a^xf(t)
+	  \d t$是$f(x)$的一个原函数}
+	\end{itemize}
+% 	{\bf 思考：}为什么$\Phi(x)$是$f(x)$的“一个”原函数？
+\end{frame}
+
+\begin{frame}{变限积分求导}
+	\linespread{1.2}\pause 
+	$$\alert{\left[\dint_{\varphi(x)}^{\psi(x)}f(t)\d t\right]'_x
+	=f[\psi(x)]\psi'(x)-f[\varphi(x)]\varphi'(x)}$$\pause 
+	\begin{exampleblock}{{\bf 例2：}求下列函数的导函数\hfill P325-例6}
+		\begin{columns}[t]
+			\column{.5\textwidth}
+				\begin{enumerate}\pause 
+				  \item $y=\dint_0^{x}e^{-t^2}\d t$\pause 
+				  \item $y=\dint_0^{x^2}\sqrt{1+t^4}\d t$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{2}
+				  \item $y=\dint_{-x}^{\sqrt x}\sin t^2\d t$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例3}\hfill P329-例13}
+		设$f(x)$在$[0,+\infty)$内连续，且$f(x)>0$，证明：
+		$$F(x)=\df{\dint_0^xtf(t)\d t}{\dint_0^xf(t)\d t}$$
+		在$(0,+\infty)$内单调递增。
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4}\hfill P330-例14}
+		设$f(x)$在$[0,+\infty)$上可导，$f(0)=0$，且存在反函数$g(x)$，已知
+		$$\dint_0^{f(x)}g(t)\d t=(x-1)e^x+x^2+1,$$
+		求$f(x)$。
+	\end{exampleblock}
+\end{frame}
+
+\section{定积分的计算}
+
+\begin{frame}{定积分换元法与分部积分法}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理6.3.3}（换元法）\hfill P346}
+		设$f(x)$在$[a,b]$上连续，函数$x=\varphi(t)$满足：
+		\begin{enumerate}
+		  \item $\varphi(\alpha)=a,\;\varphi(\beta)=b$;
+		  \item $\varphi(t)$在$[\alpha,\beta]$上连续可导，且$\varphi(t)\in[a,b]$，则
+		\end{enumerate}
+		$$\alert{\dint_a^bf(x)\d
+		x=\dint_{\alpha}^{\beta}f[\varphi(t)]\varphi'(t)\d t}$$ \end{block}\pause 
+	\begin{block}{{\bf 定理6.3.4}（分部积分法）\hfill P350}
+		$$\alert{\dint_a^bu(x)\d v(x)=u(x)v(x)|_a^b-\dint_a^bv(x)\d u(x)}$$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例4：}计算下列定积分\hfill P347-例24-25}\pause 
+% 		\begin{columns}
+% 			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\dint_9^4\df 1{\sqrt x}\d x$\pause 
+				  \item $\dint_0^1\sqrt{(1-x^2)^3}\d x$\pause 
+				  \item $\dint_0^{\ln 2}\sqrt{1-e^{-2x}}\d x$
+				\end{enumerate}
+% 			\column{.5\textwidth}
+% 				\begin{enumerate}
+% 				  \addtocounter{enumi}{2}
+% 				  \item $\dint_{-\pi/2}^{\pi/2}\df{\sin^2x}{1+e^{-x}}\d x$
+% 				\end{enumerate}
+% 		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{定积分的特殊计算方法}
+	\linespread{1.5}
+	\begin{enumerate}\pause 
+	  \item {\bf 对称区间上的定积分：}%\pause 例如：
+% 	  $$\dint_{-\pi/2}^{\pi/2}\df{\sin^2x}{1+e^{-x}}\d x$$\pause 
+% 	  \item {\bf 奇、偶函数的定积分}\pause 
+% 	  \begin{itemize}
+% 	    \item 奇函数：$\dint_{-a}^af(x)=0$\pause 
+% 	    \item 偶函数：$\dint_{-a}^af(x)=2\dint_0^af(x)$
+% 	  \end{itemize}
+	\end{enumerate}
+	\pause
+	\begin{exampleblock}{{\bf 例：}计算}
+		\begin{enumerate}
+		  \item $\dint_{-\pi/2}^{\pi/2}\df{\sin^2x}{1+e^{-x}}\d x$
+		  \item $\dint_{-1}^1\df{x+\cos x}{1+\sin^2x}\d x$
+		  \item $\dint_0^{\pi}\df{\cos x}{\sqrt{a^2\sin^2x+b^2\cos^2x}}\d
+		  x\;\;(a^2+b^2\ne 0)$
+		\end{enumerate}
+	\end{exampleblock}
+\end{frame}
+
+% \begin{frame}{定积分的特殊计算方法}
+% 	\linespread{1.5}
+% 	\begin{enumerate}\pause 
+% 	  \item {\bf 对称区间上的定积分：}\pause 例如：
+% 	  $$\dint_{-\pi/2}^{\pi/2}\df{\sin^2x}{1+e^{-x}}\d x$$\pause 
+% 	  \item {\bf 奇、偶函数的定积分}\pause 
+% 	  \begin{itemize}
+% 	    \item 奇函数：$\dint_{-a}^af(x)=0$\pause 
+% 	    \item 偶函数：$\dint_{-a}^af(x)=2\dint_0^af(x)$
+% 	  \end{itemize}
+% 	\end{enumerate}
+% \end{frame}
+
+\begin{frame}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \addtocounter{enumi}{1}\pause 
+	  \item {\bf 周期函数的定积分}\pause 
+	  $$\dint_a^{a+T}f(x)\d x=\dint_0^{T}f(x)\d x$$\pause 
+	  \vspace{-1em}
+	  \item {\bf 正弦、余弦的转换：}\pause $$\dint_0^{\pi/2}f(\sin
+	  x)\d x=\dint_0^{\pi/2}f(\cos x)\d x$$
+	\end{enumerate}
+	\pause
+	\begin{exampleblock}{{\bf 例：}计算}
+		$$I=\dint_0^{\pi/2}\df{\cos x}{\sin x+\cos x}\d x$$
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf Newton-Leibnitz公式}
+	  $$\alert{\dint_a^bf(x)\d x=F(b)-F(a)}$$
+	  \item {\bf 变限积分}
+	  $$\alert{\left[\dint_a^xf(t)dt\right]'_x=f(x)}$$
+	  \item {\bf 定积分的计算}
+	  \begin{itemize}
+	    \item 换元法、分部积分法
+	    \item \alert{定积分的一些特殊性质}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+%====================================
+
+% \begin{frame}{title}
+% 	\linespread{1.2}
+% 	\begin{block}{{\bf title}\hfill}
+% 		123
+% 	\end{block}
+% \end{frame}

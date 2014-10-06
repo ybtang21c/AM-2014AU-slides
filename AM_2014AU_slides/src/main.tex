@@ -1,0 +1,151 @@
+% !Mode:: "TeX:UTF-8"
+
+%Composed by Y.B. TANG (ybtang21c@gmail.com), spring-2011
+%tex distribution: Texlive / MikTex 2010
+%recommended editer: Eclipse + Texlipse
+%usage: compile with XeLatex
+
+%option: red, brown, blue
+% \documentclass[14pt,handout]{beamer}
+\documentclass[14pt]{beamer}
+% \documentclass[usepdftitle=false,mathserif, 14pt]{beamer}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,bm}
+% \usepackage{txfonts} %another style of math fonts
+\usepackage{beamerthemesplit,color}
+\usepackage{ulem} %erase line
+\usepackage{esint} %any type of integral symbol
+% \usepackage{yhmath} %圆弧帽：\wideparen{AB}
+% \usepackage{graphics}
+\usepackage{graphicx}
+
+%==============XeCJK==============================
+\usepackage[slantfont,boldfont,CJKchecksingle]{xeCJK}
+\setmainfont{Times New Roman}
+\setCJKmainfont[BoldFont={Adobe Heiti Std}, ItalicFont={Adobe Kaiti Std},
+    SlantedFont={Adobe Fangsong Std},
+    BoldItalicFont={Adobe Kaiti Std},
+    BoldSlantedFont={Adobe Fangsong Std}]{Adobe Kaiti Std}
+\punctstyle{CCT}
+\usepackage{CJKfntef}
+
+% %==============std fontspec settings==============
+% \usepackage[no-math,cm-default]{fontspec}
+% % \newfontfamily\zhfont[BoldFont=Adobe Heiti Std]{Adobe Heiti Std}
+% \newfontfamily\zhfont[BoldFont=Adobe Heiti Std]{Adobe Kaiti Std}
+% 
+% %==============spacing of CH in Xetex==============
+% \usepackage{zhspacing} 
+% \zhspacing
+
+%==============layout setting==============
+\setlength{\parindent}{0pt}  
+
+%==============beamer configuration==============
+\setbeamertemplate{theorems}[normal font]
+
+%============beamer theme setting #2============
+\mode<presentation>{
+	\usetheme{CambridgeUS} %Copenhagen, Warsaw, CambridgeUS
+  	\usecolortheme{crane} %rose, seahorse, lily, crane
+  	\usefonttheme{serif}
+  	\usefonttheme{structurebold}
+  	\useoutertheme{infolines}
+%   \beamertemplateshadingbackground{brown!5}{yellow!10}
+% 	\setbeamercolor{frametitle}{bg=white}	
+%  	\setbeamercovered{transparent}
+}
+
+%============TOC setting============
+\AtBeginSection{
+   \begin{frame}{内容提要}
+     \tableofcontents[currentsection,hideallsubsections]
+   \end{frame}
+ }
+% \AtBeginSubsection{
+%    \begin{frame}{内容提要}
+%      \tableofcontents[currentsection,currentsubsection]
+%    \end{frame}
+% }
+% \AtBeginSection{
+%   \frame{\tableofcontents[sections={\thesection}]}
+% }
+
+%================exampleblock counter===================
+% \newcounter{examplecounter}
+% \usecounter{examplecounter}
+% \setcounter{examplecounter}{1}
+% \newcommand{\exno}{{\bf
+% 例\arabic{examplecounter}}\refstepcounter{examplecounter}}
+
+%================block setting test=====================
+% \definecolor{beamer@blendedred}{rgb}{0.7,0.2,0.2} % use structure theme to change
+% \definecolor{beamer@blendedblue}{rgb}{0.2,0.2,0.7} % use structure theme to change
+% \definecolor{beamer@blendedyellow}{rgb}{0.7,0.7,0.2}
+
+% \setbeamercolor{structure}{fg=beamer@blendedred}
+
+% \setbeamercolor{block title}
+% {use=structure,fg=structure.fg,bg=structure.fg!20!bg}
+% \setbeamercolor{block title alerted}
+% {use=alerted text,fg=alerted text.fg,bg=alerted text.fg!20!bg}
+% \setbeamercolor{block title example}
+% {use=example text,fg=example text.fg,bg=example text.fg!20!bg}
+
+% \setbeamercolor{block body}
+% {parent=normal text,use=block title,bg=block title.bg!50!bg}
+% \setbeamercolor{block body alerted}
+% {parent=normal text,use=block title alerted,bg=block title alerted.bg!50!bg}
+% \setbeamercolor{block body example}
+% {parent=normal text,use=block title example,bg=block title example.bg!50!bg}
+
+% \setbeamercolor{titlelike}{parent=structure,bg=white!90!red}
+%=======================================================
+
+%===============custom macros====================
+\input{macros.tex}
+
+%===============title setting====================
+\input{title.tex}
+
+%===============document begins here==============
+
+\begin{document}
+
+%macros.tex：自定义宏
+%title.tex：封面
+%L.tex：讲义内容模板
+%L-1.tex：分级考试讲评
+%L0.tex：课程简介
+%L1.tex：集合与映射
+%L2.tex：函数
+%L3.tex：数列极限
+%L4.tex：数列极限的性质与判敛
+%L5.tex：无穷级数
+%L6.tex：级数收敛性的判定
+%L7.tex：函数极限及其基本性质
+%L8.tex：函数极限存在的判定准则
+%L9.tex：无穷小与无穷大/函数界限练习课
+%L10.tex：连续函数
+%L11.tex：导数
+%L12.tex：导数的计算
+%L13.tex：导数与微分
+%L14.tex：变化率与相对变化率
+%L15.tex：不定积分
+%L16.tex：函数的极值与最值
+%L17.tex：微分中值定理及其应用
+%L18.tex：可导函数的单调性与极值
+%L19.tex：凹凸性与分析作图
+%L20.tex：弧微分与曲率
+%L21.tex：Taylor公式
+%L22.tex：导数与微分的应用习题课
+%L23.tex：不定积分的计算
+%L24.tex：定积分
+%L25.tex：微积分基本公式与定积分的计算
+%L26.tex：定积分的应用
+%L27.tex：反常积分
+%L28.tex：定积分习题课
+
+    \input{L2.tex}
+
+\end{document}

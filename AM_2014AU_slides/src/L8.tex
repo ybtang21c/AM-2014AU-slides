@@ -1,0 +1,158 @@
+\begin{frame}
+	\frametitle{第八讲、函数极限存在的判定准则}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 内容与要求}{\color{blue}（ \S3.2 ）}
+	  \begin{itemize}
+	    \item 掌握复合函数极限的性质
+	    \item 理解函数极限与数列极限的关系
+	    \item 熟练掌握两个常用极限及其应用
+	  \vspace{1em}
+	  \end{itemize}
+	  \item {\bf 课后练习：}
+	  \begin{itemize}
+	    \item 书面作业：{\b 习题3.2：2,3,5,6}
+	    \item 思考题：{\b 习题3.2：4,7}
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[<+->]{复习与回顾}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 六种不同的趋势：}
+	  \begin{itemize}
+	    \item \alert{$x\to\infty,\,+\infty,\,-\infty,\,x_0,\,x_0^+,\,x_0^-$}
+	  \end{itemize}
+	  \item {\bf 极限的“$\e-\delta$”定义}
+	  \begin{itemize}
+	    \item \alert{$\limx{x_0}f(x)=A:\forall\e>0,\exists\delta>0,\forall
+	    0<|x-x_0|<\delta,|f(x)-A|<e$}
+	  \end{itemize}
+	  \item {\bf 函数极限的基本性质}
+	  \begin{itemize}
+	    \item 唯一性、有界性、保号性、四则运算
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
+
+\section{复合函数的极限}
+
+\begin{frame}{复合函数的极限}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理3.2.2}\hfill P116}
+		设有复合函数$y=f[g(x)]$，其中
+		$$\limx{x_0}g(x)=u_0,\quad\lim\limits_{u\to u_0}f(u)=A,$$
+		在$x_0$附近$g(x)\ne u_0$，则
+		$$\limx{x_0}f[g(x)]=A.$$
+	\end{block}\pause 
+	{\bf 注：}以上结论可以推广到$x$趋于无穷的情形
+\end{frame}
+
+\section{函数极限与数列极限的关系}
+
+\begin{frame}{函数极限与数列极限的关系}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理3.2.3}（Hiene定理）\hfill P117}
+		$\limx{\Delta}f(x)=A\Leftrightarrow
+		$若数列$\{x_n\}$满足：$x_n\to \Delta(n\to$ $\infty)$，则
+		$$\limn f(x_n)=A$$
+	\end{block}\pause 
+	\begin{itemize}
+	  \item 以上$\Delta$对应于函数极限的六种不同趋势\pause 
+	  \item {\bf 用途一：}证明极限不存在性\pause
+	  \item {\bf 用途二：}利用函数极限计算对应的数列极限
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\linespread{1.2}
+	\begin{exampleblock}{{\bf 例1}\hfill P118}
+		证明：$f(x)=\sin\df 1x$当$x\to 0$时无极限。
+	\end{exampleblock}\pause 
+	\bigskip
+	\begin{exampleblock}{{\bf 例2}\hfill 习题3.2-7}
+		证明Dirichlet函数在任意点处无极限。
+	\end{exampleblock}
+\end{frame}
+
+\section{函数极限的夹逼定理}
+
+\begin{frame}{函数极限的夹逼定理}
+	\linespread{1.2}\pause 
+	\begin{block}{{\bf 定理3.2.5}\hfill P119}
+		设在$x_0$的某领域内，恒有
+		$$\varphi(x)\leq f(x)\leq\psi(x), $$
+		且$\limx{x_0}\varphi(x)=\limx{x_0}\psi(x)=A$，则
+		$$\limx{x_0}f(x)=A.$$
+	\end{block}
+\end{frame}
+
+% \subsection{重要极限一：$\limx{\infty}\left(1+\df 1x\right)^x=e$}
+
+\begin{frame}{重要极限一}
+	\linespread{1.2}
+	\begin{alertblock}{{\bf 例3}\hfill P120-例9}
+		证明：$\limx{\infty}\left(1+\df 1x\right)^x=e$
+	\end{alertblock}\pause 
+	\begin{exampleblock}{{\bf 例4：}计算下列极限\hfill}\pause 
+		\begin{columns}
+			\column{.45\textwidth}
+				\begin{enumerate}
+				  \item $\limx{0}(1+x)^{1/x}$\pause 
+				  \item $\limx 0(1+\sin x)^{1/\sin x}$\pause 
+				  \item $\limx 0\df{\ln(1+ax)}{x}$\pause 
+				\end{enumerate}
+			\column{.55\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{3}
+				  \item $\limx 0\df{e^{ax}-1}{x}$\pause 
+				  \item $\limx 0\df{a^x-1}{x}(a>0)$\pause 
+				  \item $\limn n(\sqrt[n]{a}-1) (a>0)$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+% \subsection{重要极限二：$\limx{0}\df {\sin x}x=1$}
+
+\begin{frame}{重要极限二}
+	\linespread{1.2}
+	\begin{alertblock}{{\bf 例5}\hfill P121-例11}
+		证明：$\limx{0}\df {\sin x}x=1$
+	\end{alertblock}\pause 
+	\begin{exampleblock}{{\bf 例6：}计算下列极限\hfill}\pause 
+		\begin{columns}[t]
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \item $\limx{0}\df{\sin\sin x}{\sin x}$\pause 
+				  \item $\limx 0\df{1-\cos x}{x^2}$\pause 
+				  \item $\limx 0\df{\sin mx}{\sin nx}(n\ne 0)$\pause 
+				\end{enumerate}
+			\column{.5\textwidth}
+				\begin{enumerate}
+				  \addtocounter{enumi}{3}
+				  \item $\limx 0\df{\tan x}{x}$\pause 
+				  \item $\limx a\df{\sin x-\sin a}{x-a}$
+% 				  \item $\limn n(\sqrt[n]{a}-1) (a>0)$
+				\end{enumerate}
+		\end{columns}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}[<+->]{小结}
+	\linespread{1.5}
+	\begin{enumerate}
+	  \item {\bf 函数极限存在性的判定：}
+	  \begin{itemize}
+	    \item 复合函数
+	    \item 函数极限与数列极限（Hiene定理）
+	    \item 夹逼定理
+	  \end{itemize}
+	  \item {\bf 两个重要极限及其应用}
+	  \begin{itemize}
+	    \item $\limx{\infty}\left(1+\df 1x\right)^x=e$
+	    \item $\limx{0}\df {\sin x}x=1$
+	  \end{itemize}
+	\end{enumerate}
+\end{frame}
